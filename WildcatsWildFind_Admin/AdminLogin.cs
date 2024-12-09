@@ -6,5 +6,10 @@ namespace WildcatsWildFind_Admin
         {
             InitializeComponent();
         }
+
+        private void AdminLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

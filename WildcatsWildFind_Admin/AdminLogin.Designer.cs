@@ -29,20 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogin));
-            this.SuspendLayout();
+            SuspendLayout();
             // 
-            // Form1
+            // AdminLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = (System.Drawing.Image)resources.GetObject("$this.BackgroundImage");
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1422, 977);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
-            this.Text = "AdminLogin";
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1422, 977);
+            DoubleBuffered = true;
+            ForeColor = Color.Coral;
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "AdminLogin";
+            Text = "AdminLogin";
+            Load += AdminLogin_Load;
+            ResumeLayout(false);
         }
 
         #endregion
