@@ -121,16 +121,25 @@
   <data name="Admin - Report Found Item (Tarunga lang huhu) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Admin - Report Found Item (Tarunga lang huhu) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Admin_ Main Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Admin_ Main Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Admin - Report Found Item (Tarunga lang huhu)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Admin - Report Found Item (Tarunga lang huhu).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Admin - Homepage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Admin - Homepage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Admin - Report Found Item (Tarunga lang huhu)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Admin - Report Found Item (Tarunga lang huhu).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="down-arrow (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down-arrow (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="down-arrow (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down-arrow (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="down-arrow (2)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down-arrow (2)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
