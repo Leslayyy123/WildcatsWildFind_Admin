@@ -47,10 +47,10 @@
             guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.FillColor = Color.White;
-            guna2Panel1.Location = new Point(0, 63);
+            guna2Panel1.Location = new Point(0, 57);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel1.Size = new Size(322, 914);
+            guna2Panel1.Size = new Size(322, 920);
             guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel2
@@ -76,7 +76,7 @@
             guna2Panel3.Location = new Point(0, 0);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel3.Size = new Size(1422, 63);
+            guna2Panel3.Size = new Size(1422, 57);
             guna2Panel3.TabIndex = 1;
             // 
             // ReportFoundItem

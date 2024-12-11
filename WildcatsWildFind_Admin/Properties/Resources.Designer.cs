@@ -103,9 +103,15 @@ namespace WildcatsWildFind_Admin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap import_export {
             get {
                 object obj = ResourceManager.GetObject("import-export", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap down_arrow__2_ {
+            get {
+                object obj = ResourceManager.GetObject("down-arrow (2)", resourceCulture);
+>>>>>>> f9782573e28b1d94cfcc537b2cd3c200cb015fc4
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +119,15 @@ namespace WildcatsWildFind_Admin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap import_export__1_ {
             get {
                 object obj = ResourceManager.GetObject("import-export (1)", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap down_arrow__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("down-arrow (2)1", resourceCulture);
+>>>>>>> f9782573e28b1d94cfcc537b2cd3c200cb015fc4
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +135,7 @@ namespace WildcatsWildFind_Admin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap import_export1 {
             get {
                 object obj = ResourceManager.GetObject("import-export1", resourceCulture);
@@ -136,6 +149,11 @@ namespace WildcatsWildFind_Admin.Properties {
         internal static System.Drawing.Bitmap import_export2 {
             get {
                 object obj = ResourceManager.GetObject("import-export2", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap down_arrow__2_2 {
+            get {
+                object obj = ResourceManager.GetObject("down-arrow (2)2", resourceCulture);
+>>>>>>> f9782573e28b1d94cfcc537b2cd3c200cb015fc4
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
