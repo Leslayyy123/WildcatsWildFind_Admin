@@ -73,6 +73,16 @@ namespace WildcatsWildFind_Admin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Admin___Report_Found_Item__Tarunga_lang_huhu_ {
+            get {
+                object obj = ResourceManager.GetObject("Admin - Report Found Item (Tarunga lang huhu)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Admin___Report_Found_Item__Tarunga_lang_huhu___1_ {
             get {
                 object obj = ResourceManager.GetObject("Admin - Report Found Item (Tarunga lang huhu) (1)", resourceCulture);
