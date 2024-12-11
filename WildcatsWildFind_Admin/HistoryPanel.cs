@@ -16,5 +16,15 @@ namespace WildcatsWildFind_Admin
         {
             InitializeComponent();
         }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

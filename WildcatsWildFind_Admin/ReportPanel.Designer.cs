@@ -400,11 +400,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-<<<<<<< HEAD
             BackColor = Color.Maroon;
-=======
-//            BackgroundImage = Properties.Resources.Admin___Report_Found_Item__Tarunga_lang_huhu___1_;
->>>>>>> parent of 488c246 (Revert "")
+
             ClientSize = new Size(1138, 914);
             Controls.Add(guna2Panel1);
             Controls.Add(panel3);
