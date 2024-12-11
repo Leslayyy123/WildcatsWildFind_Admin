@@ -39,7 +39,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
-            lblName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -47,15 +47,15 @@
             guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
-            // lblName
+            // guna2HtmlLabel1
             // 
-            lblName.BackColor = Color.Transparent;
-            lblName.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblName.Location = new Point(514, 436);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(421, 41);
-            lblName.TabIndex = 0;
-            lblName.Text = "Welcome, Admin [Name]!";
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(514, 436);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(421, 41);
+            guna2HtmlLabel1.TabIndex = 0;
+            guna2HtmlLabel1.Text = "Welcome, Admin [Name]!";
             // 
             // guna2Button1
             // 
@@ -164,7 +164,7 @@
             Controls.Add(guna2Button4);
             Controls.Add(guna2Button2);
             Controls.Add(guna2Button1);
-            Controls.Add(lblName);
+            Controls.Add(guna2HtmlLabel1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "AdminDashboard";
@@ -176,7 +176,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;

@@ -72,7 +72,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-//            BackgroundImage = Properties.Resources.Admin___Report_Found_Item__Tarunga_lang_huhu___1_;
+            BackgroundImage = Properties.Resources.Admin___Report_Found_Item__Tarunga_lang_huhu___1_;
             ClientSize = new Size(1138, 914);
             Controls.Add(guna2TextBox1);
             FormBorderStyle = FormBorderStyle.None;
