@@ -34,16 +34,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogin));
             btnUsername = new Guna.UI2.WinForms.Guna2Button();
             btnPassword = new Guna.UI2.WinForms.Guna2Button();
             btnLogin = new Guna.UI2.WinForms.Guna2Button();
             lblOnly = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblForgotPass = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            cmbx1 = new Controls.cmbx();
             SuspendLayout();
             // 
             // btnUsername
@@ -130,53 +126,6 @@
             lblForgotPass.TabIndex = 4;
             lblForgotPass.Text = "Forgot Password?";
             // 
-            // guna2TextBox3
-            // 
-            guna2TextBox3.BackColor = Color.Transparent;
-            guna2TextBox3.BorderRadius = 15;
-            guna2TextBox3.CustomizableEdges = customizableEdges7;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FillColor = Color.FromArgb(241, 234, 234);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI", 9F);
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(232, 327);
-            guna2TextBox3.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PasswordChar = '\0';
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.BorderRadius = 15;
-            guna2TextBox3.ShadowDecoration.Color = Color.DimGray;
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox3.ShadowDecoration.Depth = 15;
-            guna2TextBox3.ShadowDecoration.Enabled = true;
-            guna2TextBox3.ShadowDecoration.Shadow = new Padding(0, 0, 8, 8);
-            guna2TextBox3.Size = new Size(258, 61);
-            guna2TextBox3.TabIndex = 5;
-            // 
-            // cmbx1
-            // 
-            cmbx1.BackColor = Color.FromArgb(241, 234, 234);
-            cmbx1.BorderColor = Color.MediumSeaGreen;
-            cmbx1.BorderSize = 0;
-            cmbx1.DropDownStyle = ComboBoxStyle.DropDown;
-            cmbx1.Font = new Font("Segoe UI", 10F);
-            cmbx1.ForeColor = Color.DimGray;
-            cmbx1.IconColor = Color.Maroon;
-            cmbx1.ListBackColor = Color.FromArgb(230, 228, 245);
-            cmbx1.ListTextColor = Color.DimGray;
-            cmbx1.Location = new Point(276, 342);
-            cmbx1.MinimumSize = new Size(200, 30);
-            cmbx1.Name = "cmbx1";
-            cmbx1.Size = new Size(200, 30);
-            cmbx1.TabIndex = 6;
-            cmbx1.Texts = "";
-            // 
             // AdminLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -184,8 +133,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1440, 1024);
-            Controls.Add(cmbx1);
-            Controls.Add(guna2TextBox3);
             Controls.Add(lblForgotPass);
             Controls.Add(lblOnly);
             Controls.Add(btnLogin);
@@ -207,7 +154,5 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblOnly;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblForgotPass;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Controls.cmbx cmbx1;
     }
 }

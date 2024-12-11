@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             lblName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            btnReport = new Guna.UI2.WinForms.Guna2GradientButton();
+            btnView = new Guna.UI2.WinForms.Guna2GradientButton();
+            btnHistory = new Guna.UI2.WinForms.Guna2GradientButton();
+            btnRetrieval = new Guna.UI2.WinForms.Guna2GradientButton();
+            btnSignOut = new Guna.UI2.WinForms.Guna2GradientButton();
             SuspendLayout();
             // 
             // lblName
@@ -57,100 +57,110 @@
             lblName.TabIndex = 0;
             lblName.Text = "Welcome, Admin [Name]!";
             // 
-            // guna2Button1
+            // btnReport
             // 
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Gold;
-            guna2Button1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(525, 567);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(400, 57);
-            guna2Button1.TabIndex = 1;
-            guna2Button1.Text = "Report Found Item";
+            btnReport.BackColor = Color.Transparent;
+            btnReport.BorderRadius = 10;
+            btnReport.CustomizableEdges = customizableEdges11;
+            btnReport.DisabledState.BorderColor = Color.DarkGray;
+            btnReport.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnReport.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnReport.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnReport.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnReport.FillColor = Color.Gold;
+            btnReport.FillColor2 = Color.FromArgb(208, 177, 10);
+            btnReport.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReport.ForeColor = Color.White;
+            btnReport.Location = new Point(525, 568);
+            btnReport.Name = "btnReport";
+            btnReport.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnReport.Size = new Size(400, 56);
+            btnReport.TabIndex = 6;
+            btnReport.Text = "Report Found Item";
             // 
-            // guna2Button2
+            // btnView
             // 
-            guna2Button2.BackColor = Color.Transparent;
-            guna2Button2.BorderRadius = 10;
-            guna2Button2.CustomizableEdges = customizableEdges3;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.Gold;
-            guna2Button2.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(525, 640);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(400, 57);
-            guna2Button2.TabIndex = 2;
-            guna2Button2.Text = "View Unclaimed Items";
+            btnView.BackColor = Color.Transparent;
+            btnView.BorderRadius = 10;
+            btnView.CustomizableEdges = customizableEdges13;
+            btnView.DisabledState.BorderColor = Color.DarkGray;
+            btnView.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnView.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnView.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnView.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnView.FillColor = Color.Gold;
+            btnView.FillColor2 = Color.FromArgb(208, 177, 10);
+            btnView.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnView.ForeColor = Color.White;
+            btnView.Location = new Point(525, 641);
+            btnView.Name = "btnView";
+            btnView.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnView.Size = new Size(400, 56);
+            btnView.TabIndex = 7;
+            btnView.Text = "View Unclaimed Items";
             // 
-            // guna2Button3
+            // btnHistory
             // 
-            guna2Button3.BackColor = Color.Transparent;
-            guna2Button3.BorderRadius = 10;
-            guna2Button3.CustomizableEdges = customizableEdges5;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.Gold;
-            guna2Button3.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(525, 795);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button3.Size = new Size(400, 57);
-            guna2Button3.TabIndex = 4;
-            guna2Button3.Text = "History";
+            btnHistory.BackColor = Color.Transparent;
+            btnHistory.BorderRadius = 10;
+            btnHistory.CustomizableEdges = customizableEdges15;
+            btnHistory.DisabledState.BorderColor = Color.DarkGray;
+            btnHistory.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnHistory.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnHistory.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnHistory.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnHistory.FillColor = Color.Gold;
+            btnHistory.FillColor2 = Color.FromArgb(208, 177, 10);
+            btnHistory.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHistory.ForeColor = Color.White;
+            btnHistory.Location = new Point(525, 795);
+            btnHistory.Name = "btnHistory";
+            btnHistory.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnHistory.Size = new Size(400, 56);
+            btnHistory.TabIndex = 9;
+            btnHistory.Text = "History";
             // 
-            // guna2Button4
+            // btnRetrieval
             // 
-            guna2Button4.BackColor = Color.Transparent;
-            guna2Button4.BorderRadius = 10;
-            guna2Button4.CustomizableEdges = customizableEdges7;
-            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button4.FillColor = Color.Gold;
-            guna2Button4.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(525, 717);
-            guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button4.Size = new Size(400, 57);
-            guna2Button4.TabIndex = 3;
-            guna2Button4.Text = "Retrieval Requests";
+            btnRetrieval.BackColor = Color.Transparent;
+            btnRetrieval.BorderRadius = 10;
+            btnRetrieval.CustomizableEdges = customizableEdges17;
+            btnRetrieval.DisabledState.BorderColor = Color.DarkGray;
+            btnRetrieval.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnRetrieval.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnRetrieval.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnRetrieval.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnRetrieval.FillColor = Color.Gold;
+            btnRetrieval.FillColor2 = Color.FromArgb(208, 177, 10);
+            btnRetrieval.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRetrieval.ForeColor = Color.White;
+            btnRetrieval.Location = new Point(525, 718);
+            btnRetrieval.Name = "btnRetrieval";
+            btnRetrieval.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnRetrieval.Size = new Size(400, 56);
+            btnRetrieval.TabIndex = 8;
+            btnRetrieval.Text = "Retrieval Requests";
             // 
-            // guna2Button5
+            // btnSignOut
             // 
-            guna2Button5.BackColor = Color.Transparent;
-            guna2Button5.BorderRadius = 10;
-            guna2Button5.CustomizableEdges = customizableEdges9;
-            guna2Button5.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button5.FillColor = Color.Maroon;
-            guna2Button5.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button5.ForeColor = Color.White;
-            guna2Button5.Location = new Point(525, 869);
-            guna2Button5.Name = "guna2Button5";
-            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button5.Size = new Size(400, 57);
-            guna2Button5.TabIndex = 5;
-            guna2Button5.Text = "Sign Out";
+            btnSignOut.BackColor = Color.Transparent;
+            btnSignOut.BorderRadius = 10;
+            btnSignOut.CustomizableEdges = customizableEdges19;
+            btnSignOut.DisabledState.BorderColor = Color.DarkGray;
+            btnSignOut.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSignOut.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSignOut.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnSignOut.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSignOut.FillColor = Color.FromArgb(177, 8, 8);
+            btnSignOut.FillColor2 = Color.FromArgb(112, 33, 33);
+            btnSignOut.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSignOut.ForeColor = Color.White;
+            btnSignOut.Location = new Point(525, 869);
+            btnSignOut.Name = "btnSignOut";
+            btnSignOut.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnSignOut.Size = new Size(400, 56);
+            btnSignOut.TabIndex = 10;
+            btnSignOut.Text = "Sign Out";
             // 
             // AdminDashboard
             // 
@@ -159,12 +169,12 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1440, 1024);
-            Controls.Add(guna2Button5);
-            Controls.Add(guna2Button3);
-            Controls.Add(guna2Button4);
-            Controls.Add(guna2Button2);
-            Controls.Add(guna2Button1);
             Controls.Add(lblName);
+            Controls.Add(btnReport);
+            Controls.Add(btnView);
+            Controls.Add(btnRetrieval);
+            Controls.Add(btnHistory);
+            Controls.Add(btnSignOut);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "AdminDashboard";
@@ -177,10 +187,10 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel lblName;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2GradientButton btnReport;
+        private Guna.UI2.WinForms.Guna2GradientButton btnView;
+        private Guna.UI2.WinForms.Guna2GradientButton btnHistory;
+        private Guna.UI2.WinForms.Guna2GradientButton btnRetrieval;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSignOut;
     }
 }
