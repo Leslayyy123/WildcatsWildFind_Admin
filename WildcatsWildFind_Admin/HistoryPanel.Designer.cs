@@ -153,7 +153,7 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.BackColor = Color.FromArgb(241, 234, 234);
-            guna2PictureBox1.BackgroundImage = Properties.Resources.search__1_;
+            //guna2PictureBox1.BackgroundImage = Properties.Resources.search__1_;
             guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             guna2PictureBox1.CustomizableEdges = customizableEdges25;
             guna2PictureBox1.FillColor = Color.Transparent;
@@ -242,7 +242,7 @@
             btnImport.FillColor = Color.FromArgb(241, 234, 234);
             btnImport.Font = new Font("Segoe UI", 9F);
             btnImport.ForeColor = Color.White;
-            btnImport.Image = Properties.Resources.import_export2;
+            //btnImport.Image = Properties.Resources.import_export2;
             btnImport.ImageOffset = new Point(4, 0);
             btnImport.ImageSize = new Size(35, 35);
             btnImport.Location = new Point(895, 50);
@@ -272,7 +272,7 @@
             btnExport.FillColor = Color.FromArgb(241, 234, 234);
             btnExport.Font = new Font("Segoe UI", 9F);
             btnExport.ForeColor = Color.White;
-            btnExport.Image = Properties.Resources.import_export__1_;
+            //btnExport.Image = Properties.Resources.import_export__1_;
             btnExport.ImageSize = new Size(35, 35);
             btnExport.Location = new Point(996, 50);
             btnExport.Name = "btnExport";
