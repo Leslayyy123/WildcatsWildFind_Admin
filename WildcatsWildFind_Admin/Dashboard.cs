@@ -16,5 +16,20 @@ namespace WildcatsWildFind_Admin
         {
             InitializeComponent();
         }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
