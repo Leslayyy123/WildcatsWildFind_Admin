@@ -114,6 +114,18 @@
             pbxItem.BorderRadius = 380;
             customizableEdges3.BottomRight = false;
             customizableEdges3.TopRight = false;
+<<<<<<< HEAD
+            guna2PictureBox1.CustomizableEdges = customizableEdges3;
+            guna2PictureBox1.FillColor = Color.Gray;
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(498, 53);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2PictureBox1.Size = new Size(640, 773);
+            guna2PictureBox1.TabIndex = 0;
+            guna2PictureBox1.TabStop = false;
+            //guna2PictureBox1.Click += guna2PictureBox1_Click;
+=======
             pbxItem.CustomizableEdges = customizableEdges3;
             pbxItem.ImageRotate = 0F;
             pbxItem.Location = new Point(498, 53);
@@ -122,6 +134,11 @@
             pbxItem.Size = new Size(640, 773);
             pbxItem.TabIndex = 0;
             pbxItem.TabStop = false;
+<<<<<<< HEAD
+=======
+            pbxItem.Click += guna2PictureBox1_Click;
+>>>>>>> 3a783579edbe444af0fe1bb2b7694cd997f59e17
+>>>>>>> 4d25ffa4f57d3036f7572c43a823a616df5cc501
             // 
             // tbxID
             // 
@@ -150,6 +167,26 @@
             // 
             // btnRep
             // 
+<<<<<<< HEAD
+            guna2Button1.BorderRadius = 21;
+            guna2Button1.CustomizableEdges = customizableEdges7;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(192, 0, 0);
+            guna2Button1.Font = new Font("Segoe UI Variable Display Semib", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(258, 778);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.BorderRadius = 10;
+            guna2Button1.ShadowDecoration.Color = Color.White;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button1.Size = new Size(234, 48);
+            guna2Button1.TabIndex = 9;
+            guna2Button1.Text = "Report";
+            //guna2Button1.Click += guna2Button1_Click;
+=======
             btnRep.Animated = true;
             btnRep.BorderRadius = 21;
             btnRep.CustomizableEdges = customizableEdges7;
@@ -168,7 +205,12 @@
             btnRep.Size = new Size(234, 48);
             btnRep.TabIndex = 9;
             btnRep.Text = "Report";
+<<<<<<< HEAD
             btnRep.Click += btnRep_Click;
+=======
+            btnRep.Click += guna2Button1_Click;
+>>>>>>> 3a783579edbe444af0fe1bb2b7694cd997f59e17
+>>>>>>> 4d25ffa4f57d3036f7572c43a823a616df5cc501
             // 
             // panel1
             // 
@@ -401,11 +443,33 @@
             guna2Panel1.Size = new Size(80, 80);
             guna2Panel1.TabIndex = 23;
             // 
+<<<<<<< HEAD
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(6, -5);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 81);
+            label1.TabIndex = 24;
+            label1.Text = "+";
+            //label1.Click += label1_Click;
+            // 
+=======
+>>>>>>> 3a783579edbe444af0fe1bb2b7694cd997f59e17
             // ReportPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+<<<<<<< HEAD
+
             BackColor = Color.Maroon;
+
+=======
+            BackColor = Color.Maroon;
+>>>>>>> 3a783579edbe444af0fe1bb2b7694cd997f59e17
             ClientSize = new Size(1138, 914);
             Controls.Add(guna2Panel1);
             Controls.Add(panel3);
