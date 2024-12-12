@@ -123,7 +123,7 @@
             guna2PictureBox1.Size = new Size(640, 773);
             guna2PictureBox1.TabIndex = 0;
             guna2PictureBox1.TabStop = false;
-            guna2PictureBox1.Click += guna2PictureBox1_Click;
+            //guna2PictureBox1.Click += guna2PictureBox1_Click;
             // 
             // guna2TextBox2
             // 
@@ -168,7 +168,7 @@
             guna2Button1.Size = new Size(234, 48);
             guna2Button1.TabIndex = 9;
             guna2Button1.Text = "Report";
-            guna2Button1.Click += guna2Button1_Click;
+            //guna2Button1.Click += guna2Button1_Click;
             // 
             // panel1
             // 
@@ -394,22 +394,15 @@
             label1.Size = new Size(76, 81);
             label1.TabIndex = 24;
             label1.Text = "+";
-            label1.Click += label1_Click;
+            //label1.Click += label1_Click;
             // 
             // ReportPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-<<<<<<< HEAD
+
             BackColor = Color.Maroon;
 
-=======
-//<<<<<<< HEAD
-            BackColor = Color.Maroon;
-//=======
-//            BackgroundImage = Properties.Resources.Admin___Report_Found_Item__Tarunga_lang_huhu___1_;
-//>>>>>>> parent of 488c246 (Revert "")
->>>>>>> f9782573e28b1d94cfcc537b2cd3c200cb015fc4
             ClientSize = new Size(1138, 914);
             Controls.Add(guna2Panel1);
             Controls.Add(panel3);
