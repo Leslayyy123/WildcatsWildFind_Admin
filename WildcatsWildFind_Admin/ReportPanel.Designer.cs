@@ -122,7 +122,6 @@
             pbxItem.Size = new Size(640, 773);
             pbxItem.TabIndex = 0;
             pbxItem.TabStop = false;
-            pbxItem.Click += guna2PictureBox1_Click;
             // 
             // tbxID
             // 
@@ -169,7 +168,7 @@
             btnRep.Size = new Size(234, 48);
             btnRep.TabIndex = 9;
             btnRep.Text = "Report";
-            btnRep.Click += guna2Button1_Click;
+            btnRep.Click += btnRep_Click;
             // 
             // panel1
             // 
@@ -388,7 +387,6 @@
             btnPbx.Size = new Size(76, 81);
             btnPbx.TabIndex = 24;
             btnPbx.Text = "+";
-            btnPbx.Click += label1_Click;
             // 
             // guna2Panel1
             // 
