@@ -153,6 +153,16 @@ namespace WildcatsWildFind_Admin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home__8_ {
+            get {
+                object obj = ResourceManager.GetObject("home (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap import_export {
             get {
                 object obj = ResourceManager.GetObject("import-export", resourceCulture);
@@ -226,6 +236,16 @@ namespace WildcatsWildFind_Admin.Properties {
         internal static System.Drawing.Bitmap maximize__2_ {
             get {
                 object obj = ResourceManager.GetObject("maximize (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu {
+            get {
+                object obj = ResourceManager.GetObject("menu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
