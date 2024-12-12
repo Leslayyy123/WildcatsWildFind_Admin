@@ -114,18 +114,6 @@
             pbxItem.BorderRadius = 380;
             customizableEdges3.BottomRight = false;
             customizableEdges3.TopRight = false;
-<<<<<<< HEAD
-            guna2PictureBox1.CustomizableEdges = customizableEdges3;
-            guna2PictureBox1.FillColor = Color.Gray;
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(498, 53);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2PictureBox1.Size = new Size(640, 773);
-            guna2PictureBox1.TabIndex = 0;
-            guna2PictureBox1.TabStop = false;
-            //guna2PictureBox1.Click += guna2PictureBox1_Click;
-=======
             pbxItem.CustomizableEdges = customizableEdges3;
             pbxItem.ImageRotate = 0F;
             pbxItem.Location = new Point(498, 53);
@@ -135,7 +123,6 @@
             pbxItem.TabIndex = 0;
             pbxItem.TabStop = false;
             pbxItem.Click += guna2PictureBox1_Click;
->>>>>>> 3a783579edbe444af0fe1bb2b7694cd997f59e17
             // 
             // tbxID
             // 
@@ -152,7 +139,7 @@
             tbxID.Font = new Font("Segoe UI", 9F);
             tbxID.ForeColor = Color.White;
             tbxID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxID.Location = new Point(57, 191);
+            tbxID.Location = new Point(57, 207);
             tbxID.Margin = new Padding(3, 4, 3, 4);
             tbxID.Name = "tbxID";
             tbxID.PasswordChar = '\0';
@@ -161,29 +148,10 @@
             tbxID.ShadowDecoration.CustomizableEdges = customizableEdges6;
             tbxID.Size = new Size(403, 38);
             tbxID.TabIndex = 2;
+            tbxID.TextChanged += tbxID_TextChanged;
             // 
             // btnRep
             // 
-<<<<<<< HEAD
-            guna2Button1.BorderRadius = 21;
-            guna2Button1.CustomizableEdges = customizableEdges7;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(192, 0, 0);
-            guna2Button1.Font = new Font("Segoe UI Variable Display Semib", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(258, 778);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.BorderRadius = 10;
-            guna2Button1.ShadowDecoration.Color = Color.White;
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button1.Size = new Size(234, 48);
-            guna2Button1.TabIndex = 9;
-            guna2Button1.Text = "Report";
-            //guna2Button1.Click += guna2Button1_Click;
-=======
             btnRep.Animated = true;
             btnRep.BorderRadius = 21;
             btnRep.CustomizableEdges = customizableEdges7;
@@ -203,7 +171,6 @@
             btnRep.TabIndex = 9;
             btnRep.Text = "Report";
             btnRep.Click += guna2Button1_Click;
->>>>>>> 3a783579edbe444af0fe1bb2b7694cd997f59e17
             // 
             // panel1
             // 
@@ -236,7 +203,7 @@
             tbxName.Font = new Font("Segoe UI", 9F);
             tbxName.ForeColor = Color.White;
             tbxName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxName.Location = new Point(57, 262);
+            tbxName.Location = new Point(57, 275);
             tbxName.Margin = new Padding(3, 4, 3, 4);
             tbxName.Name = "tbxName";
             tbxName.PasswordChar = '\0';
@@ -245,6 +212,7 @@
             tbxName.ShadowDecoration.CustomizableEdges = customizableEdges10;
             tbxName.Size = new Size(403, 38);
             tbxName.TabIndex = 11;
+            tbxName.TextChanged += tbxName_TextChanged;
             // 
             // panel3
             // 
@@ -277,7 +245,7 @@
             tbxDate.Font = new Font("Segoe UI", 9F);
             tbxDate.ForeColor = Color.White;
             tbxDate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxDate.Location = new Point(57, 404);
+            tbxDate.Location = new Point(57, 421);
             tbxDate.Margin = new Padding(3, 4, 3, 4);
             tbxDate.Name = "tbxDate";
             tbxDate.PasswordChar = '\0';
@@ -286,6 +254,7 @@
             tbxDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
             tbxDate.Size = new Size(403, 38);
             tbxDate.TabIndex = 15;
+            tbxDate.TextChanged += tbxDate_TextChanged;
             // 
             // tbxLoc
             // 
@@ -302,7 +271,7 @@
             tbxLoc.Font = new Font("Segoe UI", 9F);
             tbxLoc.ForeColor = Color.White;
             tbxLoc.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxLoc.Location = new Point(57, 333);
+            tbxLoc.Location = new Point(57, 350);
             tbxLoc.Margin = new Padding(3, 4, 3, 4);
             tbxLoc.Name = "tbxLoc";
             tbxLoc.PasswordChar = '\0';
@@ -311,6 +280,7 @@
             tbxLoc.ShadowDecoration.CustomizableEdges = customizableEdges14;
             tbxLoc.Size = new Size(403, 38);
             tbxLoc.TabIndex = 13;
+            tbxLoc.TextChanged += tbxLoc_TextChanged;
             // 
             // panel6
             // 
@@ -351,7 +321,7 @@
             tbxItemCat.Font = new Font("Segoe UI", 9F);
             tbxItemCat.ForeColor = Color.White;
             tbxItemCat.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxItemCat.Location = new Point(57, 546);
+            tbxItemCat.Location = new Point(57, 563);
             tbxItemCat.Margin = new Padding(3, 4, 3, 4);
             tbxItemCat.Name = "tbxItemCat";
             tbxItemCat.PasswordChar = '\0';
@@ -360,6 +330,7 @@
             tbxItemCat.ShadowDecoration.CustomizableEdges = customizableEdges16;
             tbxItemCat.Size = new Size(403, 38);
             tbxItemCat.TabIndex = 19;
+            tbxItemCat.TextChanged += tbxItemCat_TextChanged;
             // 
             // tbxItemDesc
             // 
@@ -376,7 +347,7 @@
             tbxItemDesc.Font = new Font("Segoe UI", 9F);
             tbxItemDesc.ForeColor = Color.White;
             tbxItemDesc.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxItemDesc.Location = new Point(57, 617);
+            tbxItemDesc.Location = new Point(57, 634);
             tbxItemDesc.Margin = new Padding(3, 4, 3, 4);
             tbxItemDesc.Name = "tbxItemDesc";
             tbxItemDesc.PasswordChar = '\0';
@@ -385,6 +356,7 @@
             tbxItemDesc.ShadowDecoration.CustomizableEdges = customizableEdges18;
             tbxItemDesc.Size = new Size(403, 38);
             tbxItemDesc.TabIndex = 21;
+            tbxItemDesc.TextChanged += tbxItemDesc_TextChanged;
             // 
             // tbxItemName
             // 
@@ -401,7 +373,7 @@
             tbxItemName.Font = new Font("Segoe UI", 9F);
             tbxItemName.ForeColor = Color.White;
             tbxItemName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxItemName.Location = new Point(57, 475);
+            tbxItemName.Location = new Point(57, 492);
             tbxItemName.Margin = new Padding(3, 4, 3, 4);
             tbxItemName.Name = "tbxItemName";
             tbxItemName.PasswordChar = '\0';
@@ -410,6 +382,7 @@
             tbxItemName.ShadowDecoration.CustomizableEdges = customizableEdges20;
             tbxItemName.Size = new Size(403, 38);
             tbxItemName.TabIndex = 17;
+            tbxItemName.TextChanged += tbxItemName_TextChanged;
             // 
             // btnPbx
             // 
@@ -437,33 +410,9 @@
             guna2Panel1.Size = new Size(80, 80);
             guna2Panel1.TabIndex = 23;
             // 
-<<<<<<< HEAD
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(6, -5);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 81);
-            label1.TabIndex = 24;
-            label1.Text = "+";
-            //label1.Click += label1_Click;
-            // 
-=======
->>>>>>> 3a783579edbe444af0fe1bb2b7694cd997f59e17
             // ReportPanel
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-<<<<<<< HEAD
-
             BackColor = Color.Maroon;
-
-=======
-            BackColor = Color.Maroon;
->>>>>>> 3a783579edbe444af0fe1bb2b7694cd997f59e17
             ClientSize = new Size(1138, 914);
             Controls.Add(guna2Panel1);
             Controls.Add(panel3);

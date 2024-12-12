@@ -83,9 +83,9 @@ namespace WildcatsWildFind_Admin
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
+            /*Dashboard dashboard = new Dashboard();
             dashboard.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void ShowPass_Click(object sender, EventArgs e)
