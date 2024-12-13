@@ -64,7 +64,7 @@
             tbxSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             tbxSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             tbxSearch.FillColor = Color.FromArgb(241, 234, 234);
-            tbxSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbxSearch.FocusedState.BorderColor = Color.White;
             tbxSearch.Font = new Font("Century Gothic", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
             tbxSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             tbxSearch.Location = new Point(33, 68);
@@ -81,6 +81,7 @@
             tbxSearch.Size = new Size(793, 68);
             tbxSearch.TabIndex = 0;
             tbxSearch.TextOffset = new Point(90, 0);
+            tbxSearch.TextChanged += tbxSearch_TextChanged;
             // 
             // panel2
             // 
@@ -109,7 +110,11 @@
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.BorderRadius = 10;
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+<<<<<<< HEAD
+            guna2Panel2.Size = new Size(1138, 914);
+=======
             guna2Panel2.Size = new Size(1134, 920);
+>>>>>>> 3db8f294022e7b82c9eea280678083beec877def
             guna2Panel2.TabIndex = 1;
             // 
             // guna2Panel1

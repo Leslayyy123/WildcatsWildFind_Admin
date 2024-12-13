@@ -122,6 +122,10 @@
             pbxItem.Size = new Size(640, 773);
             pbxItem.TabIndex = 0;
             pbxItem.TabStop = false;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3db8f294022e7b82c9eea280678083beec877def
             // 
             // tbxID
             // 
@@ -169,7 +173,11 @@
             btnRep.Size = new Size(234, 48);
             btnRep.TabIndex = 9;
             btnRep.Text = "Report";
+<<<<<<< HEAD
+
+=======
             btnRep.Click += btnRep_Click;
+>>>>>>> 3db8f294022e7b82c9eea280678083beec877def
             // 
             // panel1
             // 
