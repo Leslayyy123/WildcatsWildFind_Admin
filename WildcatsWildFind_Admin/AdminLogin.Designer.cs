@@ -59,6 +59,7 @@
             // 
             // btnLogin
             // 
+            btnLogin.Animated = true;
             btnLogin.BorderRadius = 10;
             btnLogin.CustomizableEdges = customizableEdges1;
             btnLogin.DisabledState.BorderColor = Color.DarkGray;
@@ -110,7 +111,7 @@
             txtboxUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtboxUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtboxUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtboxUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxUsername.FocusedState.BorderColor = Color.Maroon;
             txtboxUsername.Font = new Font("Segoe UI", 10.2F);
             txtboxUsername.ForeColor = Color.Black;
             txtboxUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -138,7 +139,7 @@
             txtboxPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtboxPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtboxPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtboxPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxPassword.FocusedState.BorderColor = Color.Maroon;
             txtboxPassword.Font = new Font("Segoe UI", 10.2F);
             txtboxPassword.ForeColor = Color.Black;
             txtboxPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -185,8 +186,10 @@
             HidePass.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             HidePass.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             HidePass.FillColor = Color.Transparent;
+            HidePass.FocusedColor = Color.Transparent;
             HidePass.Font = new Font("Segoe UI", 9F);
             HidePass.ForeColor = Color.White;
+            HidePass.HoverState.FillColor = Color.Transparent;
             HidePass.Location = new Point(926, 557);
             HidePass.Name = "HidePass";
             HidePass.ShadowDecoration.CustomizableEdges = customizableEdges10;

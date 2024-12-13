@@ -110,7 +110,11 @@
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.BorderRadius = 10;
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+<<<<<<< HEAD
             guna2Panel2.Size = new Size(1138, 914);
+=======
+            guna2Panel2.Size = new Size(1134, 920);
+>>>>>>> 3db8f294022e7b82c9eea280678083beec877def
             guna2Panel2.TabIndex = 1;
             // 
             // guna2Panel1
@@ -208,7 +212,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1138, 914);
+            ClientSize = new Size(1134, 920);
             Controls.Add(guna2Panel2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "UnclaimedItems";
