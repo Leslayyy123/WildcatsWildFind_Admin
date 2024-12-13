@@ -215,7 +215,7 @@
             btnHome.FillColor = Color.Transparent;
             btnHome.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnHome.ForeColor = Color.Maroon;
-            btnHome.Image = Properties.Resources.home__8_;
+//            btnHome.Image = Properties.Resources.home__8_;
             btnHome.ImageAlign = HorizontalAlignment.Left;
             btnHome.ImageOffset = new Point(25, 0);
             btnHome.ImageSize = new Size(35, 35);
@@ -250,7 +250,7 @@
             guna2Button1.FillColor = Color.Transparent;
             guna2Button1.Font = new Font("Segoe UI", 9F);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Image = Properties.Resources.menu;
+         //   guna2Button1.Image = Properties.Resources.menu;
             guna2Button1.ImageOffset = new Point(0, 10);
             guna2Button1.ImageSize = new Size(35, 35);
             guna2Button1.Location = new Point(228, 0);
