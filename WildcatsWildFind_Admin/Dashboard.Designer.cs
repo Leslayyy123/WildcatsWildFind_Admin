@@ -128,7 +128,7 @@
             btnHistory.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnHistory.Size = new Size(288, 66);
             btnHistory.TabIndex = 8;
-            btnHistory.Text = "History";
+            btnHistory.Text = "Historys";
             btnHistory.TextAlign = HorizontalAlignment.Left;
             btnHistory.TextOffset = new Point(30, 0);
             // 
