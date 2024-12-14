@@ -163,6 +163,16 @@ namespace WildcatsWildFind_Admin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_gold {
+            get {
+                object obj = ResourceManager.GetObject("home gold", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap import_export {
             get {
                 object obj = ResourceManager.GetObject("import-export", resourceCulture);
