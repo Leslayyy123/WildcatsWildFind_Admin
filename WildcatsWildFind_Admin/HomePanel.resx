@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema
+    Microsoft ResX Schema 
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-
+    
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAACjxJREFUeF7tnWuMJUUVx/fLig8QFQHFByIgz4AEFnwkfhGNfjCRAB+ELAmEhQDZ
+        DAAACwwBP0AiyAAACjxJREFUeF7tnWuMJUUVx/fLig8QFQHFByIgz4AEFnwkfhGNfjCRAB+ELAmEhQDZ
         YET8ABIFQwj6ATVZ9xExkmj8YqKGaITwCBFUYDe8NoEMyQ7MMrs7O8M8dnYeu3OH5X9unT63+txTdW/f
         6Z7pvVP/5JeZqTqnuqv+t7u6unvvrtm+ffvaRH1IhtSMvjdkYGDgmEajsWFxcfHnR44cOdWKqRN9bcj4
         +PjxMOJvMKIp/L5nfn7+bCu2LvStIQcPHvw0PHjOWdESTNmNH6dbOXWgLw05dOjQhRj4t5wFpt6cnZ39
@@ -171,7 +171,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAACC1JREFUeF7tnEts3FQUhlmW9/v9pogFIFjAggISCxZIiCUgQasKugCxQGJFhRAL
+        DAAACwwBP0AiyAAACC1JREFUeF7tnEts3FQUhlmW9/v9pogFIFjAggISCxZIiCUgQasKugCxQGJFhRAL
         FuyABUXssgBVASFKRFe0PNKWEiQIIoGUtBFRm7R5iCrPyXuSwn9yj+/4cey5nrn2uOP7S78msc85vr6f
         r6/tcXJBd3f3Fufi2AEpmB2QgtkBKZgbBvLf+at16GVpn4rgMgIhFRZKWYGQCgmlzEBIhYNiDYgUUyRz
         MyUVCooDolQYKGUGUuVPT1VA2SHl5unSAkHnv4CPMJSWj5TSAqFlRYRSaiDkokEpPRBykaA4IOyiQHFA
@@ -212,7 +212,7 @@
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAACT5JREFUeF7tnXnobVUVx5/zrPnC0ExNQ31PS0SzLGfJqVFLxAEiEMVw+kMtGixL
+        DAAACwwBP0AiyAAACT5JREFUeF7tnXnobVUVx5/zrPnC0ExNQ31PS0SzLGfJqVFLxAEiEMVw+kMtGixL
         RcEBFAUnFOchU6T0aWJqjmiZpghGOOIQDZZpaYOvz3fv9fY5d99zf+M5+4wfWPDe/a6711r3/O7ZZ++z
         z74LBgYGBgYGBgYGBgYG+srSpUu/jL2GtZ2nsa2srPZCEV04GMu4zcpqLxTRpQNyq5XVXijiK9i7rpx2
         8wa2tZXVbijkc9g/VVWO57EPmktjIKePYW8qwRz6lm9uLt2AgvbC3lN1Oe7CVjCX2iGX1bDfKrEcf8Ha
@@ -257,7 +257,7 @@
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAACFRJREFUeF7t3dvrLWUdx/HtIcVDkJZB6r0KCmlZgV3UTWTdmWctNSWNosQbSTvc
+        DAAACwwBP0AiyAAACFRJREFUeF7t3dvrLWUdx/HtIcVDkJZB6r0KCmlZgV3UTWTdmWctNSWNosQbSTvc
         aN2mdqBbU1BU8PBPWFDgAZSEIiuxxOicp9p9PvO8f9+Z3+w1/tbMfGetbb/nBV/YfOd5Ps/as/Y6zcxa
         +0BVVVVVVVVVVdU71cGDB69S/Vm137ykuoLdcHjQDbpW9R/fun3qv6ob2R3bpRtymeot36p9zv8gr2G3
         bIduwKWqN31rqobvlC+wezZLC6+6M/zQvYkh//f0d71O1X+q9rPF1QzZDC14iWpf3xk79Hfe7p2ihS5W
@@ -299,7 +299,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAaYAAAFCCAYAAAC6pHmXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAKjNJREFUeF7tne1y3DYWRP3+b7i1kaI4sRSXK668gXcaEbQ0czkDkADYDfaPk9iy
+        vAAADrwBlbxySQAAKjNJREFUeF7tne1y3DYWRP3+b7i1kaI4sRSXK668gXcaEbQ0czkDkADYDfaPk9iy
         ZoYAgXvwcYn59Pfff/8wxhhjWLCYjDHGUGExGWOMocJiMsYYQ4XFZIwxhgqLyRhjTHe+ffuW+Pr164+3
         t7fE58+fP8Df8+8OFdP6QpR4+fXXsEzGGDMbWSJgLZEvX778FBvTz/7448fn3377F19+//3jz2+314Fv
         NzFl/v7rrw/wO/nzh4oJBVheiBKo4KhMxhjDRiSPJZFIIol8vQkpkkgPvr/PpnD9FlMhnjGZM1mOXM0x
