@@ -290,7 +290,7 @@
             btnHome.CheckedState.BorderColor = Color.Gold;
             btnHome.CheckedState.FillColor = Color.Maroon;
             btnHome.CheckedState.ForeColor = Color.White;
-            btnHome.CheckedState.Image = Properties.Resources.home_gold;
+           // btnHome.CheckedState.Image = Properties.Resources.home_gold;
             btnHome.CustomizableEdges = customizableEdges19;
             btnHome.DisabledState.BorderColor = Color.DarkGray;
             btnHome.DisabledState.CustomBorderColor = Color.DarkGray;
