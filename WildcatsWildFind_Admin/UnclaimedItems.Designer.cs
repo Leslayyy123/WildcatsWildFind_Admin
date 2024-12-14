@@ -49,6 +49,7 @@
             btnExport = new Guna.UI2.WinForms.Guna2Button();
             btnImport = new Guna.UI2.WinForms.Guna2Button();
             UnclaimedContainer = new Panel();
+            label1 = new Label();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
@@ -67,7 +68,7 @@
             tbxSearch.FocusedState.BorderColor = Color.White;
             tbxSearch.Font = new Font("Century Gothic", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
             tbxSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxSearch.Location = new Point(33, 68);
+            tbxSearch.Location = new Point(41, 100);
             tbxSearch.Margin = new Padding(4, 5, 4, 5);
             tbxSearch.Name = "tbxSearch";
             tbxSearch.PasswordChar = '\0';
@@ -78,7 +79,7 @@
             tbxSearch.ShadowDecoration.Depth = 10;
             tbxSearch.ShadowDecoration.Enabled = true;
             tbxSearch.ShadowDecoration.Shadow = new Padding(0, 0, 8, 8);
-            tbxSearch.Size = new Size(793, 68);
+            tbxSearch.Size = new Size(793, 64);
             tbxSearch.TabIndex = 0;
             tbxSearch.TextOffset = new Point(90, 0);
             tbxSearch.TextChanged += tbxSearch_TextChanged;
@@ -86,7 +87,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Gray;
-            panel2.Location = new Point(991, 75);
+            panel2.Location = new Point(996, 106);
             panel2.Name = "panel2";
             panel2.Size = new Size(1, 50);
             panel2.TabIndex = 3;
@@ -96,6 +97,7 @@
             guna2Panel2.BackColor = Color.Transparent;
             guna2Panel2.BackgroundImage = (Image)resources.GetObject("guna2Panel2.BackgroundImage");
             guna2Panel2.BorderRadius = 50;
+            guna2Panel2.Controls.Add(label1);
             guna2Panel2.Controls.Add(guna2Panel1);
             guna2Panel2.Controls.Add(guna2PictureBox1);
             guna2Panel2.Controls.Add(btnExport);
@@ -111,17 +113,16 @@
             guna2Panel2.ShadowDecoration.BorderRadius = 10;
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Panel2.Size = new Size(1134, 920);
-
             guna2Panel2.TabIndex = 1;
             // 
             // guna2Panel1
             // 
             guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.FillColor = Color.DarkGray;
-            guna2Panel1.Location = new Point(109, 80);
+            guna2Panel1.Location = new Point(117, 112);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new Size(1, 43);
+            guna2Panel1.Size = new Size(1, 39);
             guna2Panel1.TabIndex = 11;
             // 
             // guna2PictureBox1
@@ -132,10 +133,10 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges5;
             guna2PictureBox1.FillColor = Color.Transparent;
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(60, 84);
+            guna2PictureBox1.Location = new Point(68, 116);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2PictureBox1.Size = new Size(35, 35);
+            guna2PictureBox1.Size = new Size(35, 31);
             guna2PictureBox1.TabIndex = 10;
             guna2PictureBox1.TabStop = false;
             // 
@@ -156,7 +157,7 @@
             btnExport.ForeColor = Color.White;
             btnExport.Image = Properties.Resources.import_export__1_;
             btnExport.ImageSize = new Size(35, 35);
-            btnExport.Location = new Point(991, 82);
+            btnExport.Location = new Point(996, 113);
             btnExport.Name = "btnExport";
             btnExport.ShadowDecoration.BorderRadius = 30;
             btnExport.ShadowDecoration.Color = Color.DimGray;
@@ -186,7 +187,7 @@
             btnImport.Image = Properties.Resources.import_export2;
             btnImport.ImageOffset = new Point(4, 0);
             btnImport.ImageSize = new Size(35, 35);
-            btnImport.Location = new Point(890, 82);
+            btnImport.Location = new Point(895, 113);
             btnImport.Name = "btnImport";
             btnImport.ShadowDecoration.BorderRadius = 30;
             btnImport.ShadowDecoration.Color = Color.DimGray;
@@ -200,10 +201,22 @@
             // UnclaimedContainer
             // 
             UnclaimedContainer.BackColor = Color.WhiteSmoke;
-            UnclaimedContainer.Location = new Point(58, 195);
+            UnclaimedContainer.Location = new Point(12, 191);
             UnclaimedContainer.Name = "UnclaimedContainer";
-            UnclaimedContainer.Size = new Size(985, 658);
+            UnclaimedContainer.Size = new Size(1110, 695);
             UnclaimedContainer.TabIndex = 5;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Anton SC", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Maroon;
+            label1.Location = new Point(407, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(275, 64);
+            label1.TabIndex = 12;
+            label1.Text = "UNCLAIMED ITEMS";
             // 
             // UnclaimedItems
             // 
@@ -215,6 +228,7 @@
             Name = "UnclaimedItems";
             Text = "RetrievalRequest";
             guna2Panel2.ResumeLayout(false);
+            guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -229,5 +243,6 @@
         private Guna.UI2.WinForms.Guna2Button btnExport;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Label label1;
     }
 }

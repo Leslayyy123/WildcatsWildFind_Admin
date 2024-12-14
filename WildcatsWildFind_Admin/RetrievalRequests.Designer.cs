@@ -41,6 +41,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
@@ -49,7 +51,9 @@
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             panel3 = new Panel();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            label1 = new Label();
+            btnExport = new Guna.UI2.WinForms.Guna2Button();
+            btnImport = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -179,46 +183,80 @@
             // 
             // panel3
             // 
-            panel3.Location = new Point(52, 114);
+            panel3.Location = new Point(20, 114);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1036, 738);
+            panel3.Size = new Size(1090, 772);
             panel3.TabIndex = 6;
             // 
-            // guna2TextBox3
+            // label1
             // 
-            guna2TextBox3.BackColor = Color.Transparent;
-            guna2TextBox3.BorderColor = Color.FromArgb(229, 171, 0);
-            guna2TextBox3.BorderRadius = 30;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Anton SC", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Maroon;
+            label1.Location = new Point(434, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(290, 64);
+            label1.TabIndex = 8;
+            label1.Text = "RETRIEVAL REQUEST";
+            // 
+            // btnExport
+            // 
+            btnExport.BackColor = Color.Transparent;
+            btnExport.BorderRadius = 30;
             customizableEdges11.BottomLeft = false;
+            customizableEdges11.TopLeft = false;
             customizableEdges11.TopRight = false;
-            guna2TextBox3.CustomizableEdges = customizableEdges11;
-            guna2TextBox3.DefaultText = "RETRIEVAL REQUESTS";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FillColor = Color.FromArgb(229, 171, 0);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TextBox3.ForeColor = Color.Maroon;
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(437, 27);
-            guna2TextBox3.Margin = new Padding(5);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PasswordChar = '\0';
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.BorderRadius = 30;
-            guna2TextBox3.ShadowDecoration.Color = Color.Gray;
-            customizableEdges12.BottomLeft = false;
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox3.ShadowDecoration.Depth = 15;
-            guna2TextBox3.ShadowDecoration.Enabled = true;
-            guna2TextBox3.ShadowDecoration.Shadow = new Padding(0, 0, 8, 8);
-            guna2TextBox3.Size = new Size(344, 51);
-            guna2TextBox3.TabIndex = 7;
-            guna2TextBox3.TextAlign = HorizontalAlignment.Center;
-            guna2TextBox3.TextChanged += guna2TextBox3_TextChanged;
+            btnExport.CustomizableEdges = customizableEdges11;
+            btnExport.DisabledState.BorderColor = Color.DarkGray;
+            btnExport.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnExport.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnExport.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnExport.FillColor = Color.FromArgb(241, 234, 234);
+            btnExport.Font = new Font("Segoe UI", 9F);
+            btnExport.ForeColor = Color.White;
+            btnExport.Image = (Image)resources.GetObject("btnExport.Image");
+            btnExport.ImageSize = new Size(35, 35);
+            btnExport.Location = new Point(997, 37);
+            btnExport.Name = "btnExport";
+            btnExport.ShadowDecoration.BorderRadius = 30;
+            btnExport.ShadowDecoration.Color = Color.DimGray;
+            btnExport.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnExport.ShadowDecoration.Depth = 15;
+            btnExport.ShadowDecoration.Enabled = true;
+            btnExport.ShadowDecoration.Shadow = new Padding(8);
+            btnExport.Size = new Size(90, 47);
+            btnExport.TabIndex = 10;
+            // 
+            // btnImport
+            // 
+            btnImport.BackColor = Color.Transparent;
+            btnImport.BackgroundImageLayout = ImageLayout.Zoom;
+            btnImport.BorderRadius = 30;
+            customizableEdges13.BottomLeft = false;
+            customizableEdges13.BottomRight = false;
+            customizableEdges13.TopRight = false;
+            btnImport.CustomizableEdges = customizableEdges13;
+            btnImport.DisabledState.BorderColor = Color.DarkGray;
+            btnImport.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnImport.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnImport.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnImport.FillColor = Color.FromArgb(241, 234, 234);
+            btnImport.Font = new Font("Segoe UI", 9F);
+            btnImport.ForeColor = Color.White;
+            btnImport.Image = (Image)resources.GetObject("btnImport.Image");
+            btnImport.ImageOffset = new Point(4, 0);
+            btnImport.ImageSize = new Size(35, 35);
+            btnImport.Location = new Point(896, 37);
+            btnImport.Name = "btnImport";
+            btnImport.ShadowDecoration.BorderRadius = 30;
+            btnImport.ShadowDecoration.Color = Color.DimGray;
+            btnImport.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnImport.ShadowDecoration.Depth = 15;
+            btnImport.ShadowDecoration.Enabled = true;
+            btnImport.ShadowDecoration.Shadow = new Padding(8);
+            btnImport.Size = new Size(102, 47);
+            btnImport.TabIndex = 9;
             // 
             // RetrievalRequests
             // 
@@ -226,7 +264,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1134, 920);
-            Controls.Add(guna2TextBox3);
+            Controls.Add(btnExport);
+            Controls.Add(btnImport);
+            Controls.Add(label1);
             Controls.Add(panel3);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
@@ -235,6 +275,7 @@
             Text = "RetrievalRequests";
             guna2Panel2.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -247,6 +288,8 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Panel panel3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Label label1;
+        private Guna.UI2.WinForms.Guna2Button btnExport;
+        private Guna.UI2.WinForms.Guna2Button btnImport;
     }
 }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema 
+    Microsoft ResX Schema
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnImport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABOElEQVRYR+2XSwrCQBBEe+UNFL2KejgR/FxIXErW6kYXnkCvodWhGqLOxGkz4gcfFKGT6ppOYkKU
+        Px/NSKQFzaETdH6gNdRhax4QqIuHFotpD+UbAmF25n3uCkJP/iEslGUU80E7bg8TkR4PP48Fs4xivqlI
+        G9t8Q1gwyyhVX9YhqsF1wHOkd6h1tiEYkDLAo6dlTasPC2AZBR57X9iVuBOtPho1k98bAPUS2kBJL5tQ
+        RjJoXKlYlqDWxTU06Y1Hb6OreIX3Ecs+gOIZwjUAjIU1OBV9zs3Dsh4Y3ztAKre3AOry0B30vO5HCEUX
+        V+h7bgA06i0pWJag3jL09Y9hqBn1Akr+/gtlJNOomXz9AOVH6VhkwF0u0DvkAEfu8oHGGQOaasZIH2j0
+        /DEJST9Q9CRajPzzaYhcAHtwSHZu7GyuAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnExport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABMklEQVRYR+1XSwrCMBR8K2+g6FXUw4ng50LiUlyrG114Ar2GzpN5ELTRvCZqFx0Y0qTzJlPbhCgt
+        GoeJSAdcglfw9oE7sMfSMoChTl41WYwnsFwImNmTDzlUCWrKhzBTdqMwHXhke56JDHi7PsyY3ShMNxfp
+        oi0XwozZjSLUFQ0RGr8DNBdqx9ovFoIGKQE+rZYdpT6YAbtRQGP7hf0SL6TUh6xiog0QeqBdg3swbaMK
+        i+sC9Rslr3Vy9UzbLSnOChDCvTxLB1C4QngCQLc1vZPxPcJE7L4FdP8NkIrnVwD2eesVFH3tIwTjkyso
+        zAqAen01W14f6Pm7ZRh6oF2B6WfHsLgusjyaEOBxKJ2KjDjkAmrHDHDhkA8oXNAglwta+oBCzx+TKuoB
+        RR+iQ8sWTYbIHei/SHZcyujkAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
