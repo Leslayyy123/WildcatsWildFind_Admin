@@ -44,15 +44,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportPanel));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportPanel));
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             tbxID = new Guna.UI2.WinForms.Guna2TextBox();
             panel1 = new Panel();
@@ -65,13 +63,13 @@
             panel6 = new Panel();
             panel7 = new Panel();
             panel8 = new Panel();
-            tbxItemCat = new Guna.UI2.WinForms.Guna2TextBox();
             tbxItemDesc = new Guna.UI2.WinForms.Guna2TextBox();
             tbxItemName = new Guna.UI2.WinForms.Guna2TextBox();
             pbxItem = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnPhoto = new Guna.UI2.WinForms.Guna2Button();
             btnRep = new Guna.UI2.WinForms.Guna2Button();
+            cmbxCat = new Controls.cmbx();
             ((System.ComponentModel.ISupportInitialize)pbxItem).BeginInit();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
@@ -210,7 +208,7 @@
             tbxDate.Font = new Font("Segoe UI", 9F);
             tbxDate.ForeColor = Color.White;
             tbxDate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxDate.Location = new Point(55, 276);
+            tbxDate.Location = new Point(55, 422);
             tbxDate.Margin = new Padding(3, 4, 3, 4);
             tbxDate.Name = "tbxDate";
             tbxDate.PasswordChar = '\0';
@@ -236,7 +234,7 @@
             tbxLoc.Font = new Font("Segoe UI", 9F);
             tbxLoc.ForeColor = Color.White;
             tbxLoc.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxLoc.Location = new Point(55, 208);
+            tbxLoc.Location = new Point(55, 347);
             tbxLoc.Margin = new Padding(3, 4, 3, 4);
             tbxLoc.Name = "tbxLoc";
             tbxLoc.PasswordChar = '\0';
@@ -271,37 +269,11 @@
             panel8.Size = new Size(403, 1);
             panel8.TabIndex = 18;
             // 
-            // tbxItemCat
-            // 
-            tbxItemCat.BackColor = Color.Transparent;
-            tbxItemCat.BorderThickness = 0;
-            tbxItemCat.CustomizableEdges = customizableEdges11;
-            tbxItemCat.DefaultText = "Item Category";
-            tbxItemCat.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbxItemCat.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbxItemCat.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbxItemCat.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbxItemCat.FillColor = Color.Maroon;
-            tbxItemCat.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxItemCat.Font = new Font("Segoe UI", 9F);
-            tbxItemCat.ForeColor = Color.White;
-            tbxItemCat.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxItemCat.Location = new Point(55, 418);
-            tbxItemCat.Margin = new Padding(3, 4, 3, 4);
-            tbxItemCat.Name = "tbxItemCat";
-            tbxItemCat.PasswordChar = '\0';
-            tbxItemCat.PlaceholderText = "";
-            tbxItemCat.SelectedText = "";
-            tbxItemCat.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            tbxItemCat.Size = new Size(403, 34);
-            tbxItemCat.TabIndex = 19;
-            tbxItemCat.TextChanged += tbxItemCat_TextChanged;
-            // 
             // tbxItemDesc
             // 
             tbxItemDesc.BackColor = Color.Transparent;
             tbxItemDesc.BorderThickness = 0;
-            tbxItemDesc.CustomizableEdges = customizableEdges13;
+            tbxItemDesc.CustomizableEdges = customizableEdges11;
             tbxItemDesc.DefaultText = "Item Description";
             tbxItemDesc.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxItemDesc.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -318,7 +290,7 @@
             tbxItemDesc.PasswordChar = '\0';
             tbxItemDesc.PlaceholderText = "";
             tbxItemDesc.SelectedText = "";
-            tbxItemDesc.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            tbxItemDesc.ShadowDecoration.CustomizableEdges = customizableEdges12;
             tbxItemDesc.Size = new Size(403, 34);
             tbxItemDesc.TabIndex = 21;
             tbxItemDesc.TextChanged += tbxItemDesc_TextChanged;
@@ -327,7 +299,7 @@
             // 
             tbxItemName.BackColor = Color.Transparent;
             tbxItemName.BorderThickness = 0;
-            tbxItemName.CustomizableEdges = customizableEdges15;
+            tbxItemName.CustomizableEdges = customizableEdges13;
             tbxItemName.DefaultText = "Item Name";
             tbxItemName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxItemName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -338,13 +310,13 @@
             tbxItemName.Font = new Font("Segoe UI", 9F);
             tbxItemName.ForeColor = Color.White;
             tbxItemName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxItemName.Location = new Point(55, 347);
+            tbxItemName.Location = new Point(55, 208);
             tbxItemName.Margin = new Padding(3, 4, 3, 4);
             tbxItemName.Name = "tbxItemName";
             tbxItemName.PasswordChar = '\0';
             tbxItemName.PlaceholderText = "";
             tbxItemName.SelectedText = "";
-            tbxItemName.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            tbxItemName.ShadowDecoration.CustomizableEdges = customizableEdges14;
             tbxItemName.Size = new Size(403, 34);
             tbxItemName.TabIndex = 17;
             tbxItemName.TextChanged += tbxItemName_TextChanged;
@@ -352,16 +324,14 @@
             // pbxItem
             // 
             pbxItem.BackColor = Color.Transparent;
-            pbxItem.BackgroundImage = (Image)resources.GetObject("pbxItem.BackgroundImage");
             pbxItem.BorderRadius = 350;
-            customizableEdges17.BottomRight = false;
-            customizableEdges17.TopRight = false;
-            pbxItem.CustomizableEdges = customizableEdges17;
-            pbxItem.FillColor = Color.Transparent;
+            customizableEdges15.BottomRight = false;
+            customizableEdges15.TopRight = false;
+            pbxItem.CustomizableEdges = customizableEdges15;
             pbxItem.ImageRotate = 0F;
             pbxItem.Location = new Point(561, 0);
             pbxItem.Name = "pbxItem";
-            pbxItem.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            pbxItem.ShadowDecoration.CustomizableEdges = customizableEdges16;
             pbxItem.Size = new Size(558, 696);
             pbxItem.TabIndex = 0;
             pbxItem.TabStop = false;
@@ -370,13 +340,13 @@
             // 
             guna2Panel1.BackColor = Color.Transparent;
             guna2Panel1.BorderRadius = 20;
-            guna2Panel1.Controls.Add(guna2Button1);
+            guna2Panel1.Controls.Add(cmbxCat);
+            guna2Panel1.Controls.Add(btnPhoto);
             guna2Panel1.Controls.Add(btnRep);
             guna2Panel1.Controls.Add(tbxID);
             guna2Panel1.Controls.Add(pbxItem);
             guna2Panel1.Controls.Add(tbxItemDesc);
             guna2Panel1.Controls.Add(tbxItemName);
-            guna2Panel1.Controls.Add(tbxItemCat);
             guna2Panel1.Controls.Add(tbxLoc);
             guna2Panel1.Controls.Add(tbxDate);
             guna2Panel1.Controls.Add(panel3);
@@ -387,36 +357,37 @@
             guna2Panel1.Controls.Add(panel2);
             guna2Panel1.Controls.Add(panel1);
             guna2Panel1.Controls.Add(panel7);
-            guna2Panel1.CustomizableEdges = customizableEdges23;
+            guna2Panel1.CustomizableEdges = customizableEdges21;
             guna2Panel1.FillColor = Color.Maroon;
             guna2Panel1.Location = new Point(18, 113);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.BorderRadius = 20;
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2Panel1.ShadowDecoration.Enabled = true;
             guna2Panel1.ShadowDecoration.Shadow = new Padding(2, 2, 8, 8);
             guna2Panel1.Size = new Size(1119, 696);
             guna2Panel1.TabIndex = 26;
             // 
-            // guna2Button1
+            // btnPhoto
             // 
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 36;
-            guna2Button1.CustomizableEdges = customizableEdges19;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.White;
-            guna2Button1.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.Maroon;
-            guna2Button1.Location = new Point(480, 559);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Button1.Size = new Size(75, 108);
-            guna2Button1.TabIndex = 27;
-            guna2Button1.Text = "+";
-            guna2Button1.TextOffset = new Point(5, -25);
+            btnPhoto.BackColor = Color.Transparent;
+            btnPhoto.BorderRadius = 36;
+            btnPhoto.CustomizableEdges = customizableEdges17;
+            btnPhoto.DisabledState.BorderColor = Color.DarkGray;
+            btnPhoto.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPhoto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPhoto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPhoto.FillColor = Color.White;
+            btnPhoto.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPhoto.ForeColor = Color.Maroon;
+            btnPhoto.Location = new Point(480, 559);
+            btnPhoto.Name = "btnPhoto";
+            btnPhoto.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnPhoto.Size = new Size(75, 108);
+            btnPhoto.TabIndex = 27;
+            btnPhoto.Text = "+";
+            btnPhoto.TextOffset = new Point(5, -25);
+            btnPhoto.Click += btnPhoto_Click;
             // 
             // btnRep
             // 
@@ -424,7 +395,7 @@
             btnRep.BorderColor = Color.Gainsboro;
             btnRep.BorderRadius = 21;
             btnRep.BorderThickness = 1;
-            btnRep.CustomizableEdges = customizableEdges21;
+            btnRep.CustomizableEdges = customizableEdges19;
             btnRep.DisabledState.BorderColor = Color.DarkGray;
             btnRep.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRep.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -437,11 +408,32 @@
             btnRep.PressedColor = Color.IndianRed;
             btnRep.ShadowDecoration.BorderRadius = 10;
             btnRep.ShadowDecoration.Color = Color.White;
-            btnRep.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnRep.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnRep.Size = new Size(264, 48);
             btnRep.TabIndex = 9;
             btnRep.Text = "Report";
             btnRep.Click += btnRep_Click;
+            // 
+            // cmbxCat
+            // 
+            cmbxCat.BackColor = Color.Maroon;
+            cmbxCat.BorderColor = Color.Maroon;
+            cmbxCat.BorderSize = 1;
+            cmbxCat.DisplayMember = "Electronics";
+            cmbxCat.DropDownStyle = ComboBoxStyle.DropDown;
+            cmbxCat.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbxCat.ForeColor = Color.White;
+            cmbxCat.IconColor = Color.White;
+            cmbxCat.Items.AddRange(new object[] { "Electronics", "Clothing", "Personal", "School" });
+            cmbxCat.ListBackColor = Color.White;
+            cmbxCat.ListTextColor = Color.Maroon;
+            cmbxCat.Location = new Point(55, 269);
+            cmbxCat.MinimumSize = new Size(200, 30);
+            cmbxCat.Name = "cmbxCat";
+            cmbxCat.Padding = new Padding(1);
+            cmbxCat.Size = new Size(403, 38);
+            cmbxCat.TabIndex = 28;
+            cmbxCat.Texts = "Item Category";
             // 
             // ReportPanel
             // 
@@ -472,12 +464,12 @@
         private Panel panel6;
         private Panel panel7;
         private Panel panel8;
-        private Guna.UI2.WinForms.Guna2TextBox tbxItemCat;
         private Guna.UI2.WinForms.Guna2TextBox tbxItemDesc;
         private Guna.UI2.WinForms.Guna2TextBox tbxItemName;
         private Guna.UI2.WinForms.Guna2PictureBox pbxItem;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnRep;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnPhoto;
+        private Controls.cmbx cmbxCat;
     }
 }
