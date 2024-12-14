@@ -21,8 +21,6 @@ namespace WildcatsWildFind_Admin
             {
                 HomePanel childForm = new HomePanel();
                 LoadChildForm(childForm);
-
-                // Pass btnHome directly to HighlightButton
                 HighlightButton(btnHome);
             }
         }
@@ -41,30 +39,24 @@ namespace WildcatsWildFind_Admin
 
         private void HighlightButton(Guna.UI2.WinForms.Guna2Button clickedButton)
         {
-            // Reset styles for all Guna2Button controls inside PanelMenu
             ResetButtonStyles(PanelMenu);
-
-            // Highlight the clicked button
-            clickedButton.FillColor = Color.Maroon; // Highlight color
-            clickedButton.ForeColor = Color.White; // Highlighted text color
-            clickedButton.Checked = true; // Mark as checked
+            clickedButton.FillColor = Color.Maroon;
+            clickedButton.ForeColor = Color.White;
+            clickedButton.Checked = true;
         }
 
         private void ResetButtonStyles(Control parent)
         {
-            // Iterate through all controls inside the specified parent
             foreach (Control control in parent.Controls)
             {
                 if (control is Guna.UI2.WinForms.Guna2Button button)
                 {
-                    // Reset styles to default
-                    button.FillColor = Color.White; // Default color
-                    button.ForeColor = Color.Black; // Default text color
-                    button.Checked = false; // Uncheck the button
+                    button.FillColor = Color.White;
+                    button.ForeColor = Color.Black;
+                    button.Checked = false;
                 }
                 else if (control.HasChildren)
                 {
-                    // Recursively reset styles for child controls
                     ResetButtonStyles(control);
                 }
             }

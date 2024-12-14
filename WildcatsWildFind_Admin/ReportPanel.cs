@@ -37,22 +37,19 @@ namespace WildcatsWildFind_Admin
             tbxLoc.Enter += TbxLoc_Enter;
             tbxLoc.Leave += TbxLoc_Leave;
 
-            // tbxDate
             tbxDate.Text = "Date";
             tbxDate.ForeColor = Color.White;
             tbxDate.Enter += TbxDate_Enter;
             tbxDate.Leave += TbxDate_Leave;
 
-            // tbxItemName
             tbxItemName.Text = "Item Name";
             tbxItemName.ForeColor = Color.White;
             tbxItemName.Enter += TbxItemName_Enter;
             tbxItemName.Leave += TbxItemName_Leave;
 
-            cmbxCat.SelectedIndex = -1; // Set no item selected initially
+            cmbxCat.SelectedIndex = -1;
             cmbxCat.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            // tbxItemDesc
             tbxItemDesc.Text = "Item Description";
             tbxItemDesc.ForeColor = Color.White;
             tbxItemDesc.Enter += TbxItemDesc_Enter;
@@ -184,7 +181,7 @@ namespace WildcatsWildFind_Admin
                 return;
             }
 
-            if (cmbxCat.SelectedIndex == -1) // Ensure a valid selection
+            if (cmbxCat.SelectedIndex == -1)
             {
                 MessageBox.Show("Please select an item category.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -195,7 +192,7 @@ namespace WildcatsWildFind_Admin
             {
                 using (MemoryStream ms = new MemoryStream())
                 {
-                    pbxItem.Image.Save(ms, pbxItem.Image.RawFormat); // Save image to stream in its original format
+                    pbxItem.Image.Save(ms, pbxItem.Image.RawFormat);
                     photoBytes = ms.ToArray();
                 }
             }
@@ -211,7 +208,6 @@ namespace WildcatsWildFind_Admin
 
                     using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
-                        // Add parameters to avoid SQL injection
                         command.Parameters.AddWithValue("@studentID", tbxID.Text);
                         command.Parameters.AddWithValue("@fullName", tbxName.Text);
                         command.Parameters.AddWithValue("@locationFound", tbxLoc.Text);
@@ -221,16 +217,11 @@ namespace WildcatsWildFind_Admin
                         command.Parameters.AddWithValue("@itemDescription", tbxItemDesc.Text);
                         command.Parameters.AddWithValue("@status", "Unclaimed");
                         command.Parameters.AddWithValue("@photo", photoBytes);
-
-
-                        // Execute the query
                         int rowsAffected = command.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Report submitted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // Optionally clear the textboxes after submission
                             ClearForm();
                         }
                         else
@@ -309,10 +300,9 @@ namespace WildcatsWildFind_Admin
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"; // Limit to image files
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Display the selected image in the PictureBox
                     pbxItem.Image = Image.FromFile(openFileDialog.FileName);
                 }
             }
