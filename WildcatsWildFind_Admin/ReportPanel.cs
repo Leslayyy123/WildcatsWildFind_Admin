@@ -37,12 +37,14 @@ namespace WildcatsWildFind_Admin
             tbxLoc.Enter += TbxLoc_Enter;
             tbxLoc.Leave += TbxLoc_Leave;
 
-             tbxDate.Text = "Date";
+            // tbxDate
+            tbxDate.Text = "Date";
             tbxDate.ForeColor = Color.White;
             tbxDate.Enter += TbxDate_Enter;
             tbxDate.Leave += TbxDate_Leave;
 
-             tbxItemName.Text = "Item Name";
+            // tbxItemName
+            tbxItemName.Text = "Item Name";
             tbxItemName.ForeColor = Color.White;
             tbxItemName.Enter += TbxItemName_Enter;
             tbxItemName.Leave += TbxItemName_Leave;
@@ -50,7 +52,8 @@ namespace WildcatsWildFind_Admin
             cmbxCat.SelectedIndex = -1; // Set no item selected initially
             cmbxCat.DropDownStyle = ComboBoxStyle.DropDownList;
 
-             tbxItemDesc.Text = "Item Description";
+            // tbxItemDesc
+            tbxItemDesc.Text = "Item Description";
             tbxItemDesc.ForeColor = Color.White;
             tbxItemDesc.Enter += TbxItemDesc_Enter;
             tbxItemDesc.Leave += TbxItemDesc_Leave;
@@ -208,7 +211,8 @@ namespace WildcatsWildFind_Admin
 
                     using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
-                         command.Parameters.AddWithValue("@studentID", tbxID.Text);
+                        // Add parameters to avoid SQL injection
+                        command.Parameters.AddWithValue("@studentID", tbxID.Text);
                         command.Parameters.AddWithValue("@fullName", tbxName.Text);
                         command.Parameters.AddWithValue("@locationFound", tbxLoc.Text);
                         command.Parameters.AddWithValue("@dateFound", tbxDate.Text);
@@ -219,13 +223,15 @@ namespace WildcatsWildFind_Admin
                         command.Parameters.AddWithValue("@photo", photoBytes);
 
 
-                         int rowsAffected = command.ExecuteNonQuery();
+                        // Execute the query
+                        int rowsAffected = command.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Report submitted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                             ClearForm();
+                            // Optionally clear the textboxes after submission
+                            ClearForm();
                         }
                         else
                         {
@@ -306,7 +312,8 @@ namespace WildcatsWildFind_Admin
                 openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"; // Limit to image files
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                     pbxItem.Image = Image.FromFile(openFileDialog.FileName);
+                    // Display the selected image in the PictureBox
+                    pbxItem.Image = Image.FromFile(openFileDialog.FileName);
                 }
             }
         }

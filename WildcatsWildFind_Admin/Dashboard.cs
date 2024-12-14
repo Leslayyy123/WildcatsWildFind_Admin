@@ -22,7 +22,8 @@ namespace WildcatsWildFind_Admin
                 HomePanel childForm = new HomePanel();
                 LoadChildForm(childForm);
 
-                 HighlightButton(btnHome);
+                // Pass btnHome directly to HighlightButton
+                HighlightButton(btnHome);
             }
         }
 
@@ -40,31 +41,39 @@ namespace WildcatsWildFind_Admin
 
         private void HighlightButton(Guna.UI2.WinForms.Guna2Button clickedButton)
         {
-             ResetButtonStyles(PanelMenu);
+            // Reset styles for all Guna2Button controls inside PanelMenu
+            ResetButtonStyles(PanelMenu);
 
-             clickedButton.FillColor = Color.Maroon;
-            clickedButton.ForeColor = Color.White;
-            clickedButton.Checked = true;
+            // Highlight the clicked button
+            clickedButton.FillColor = Color.Maroon; // Highlight color
+            clickedButton.ForeColor = Color.White; // Highlighted text color
+            clickedButton.Checked = true; // Mark as checked
         }
 
         private void ResetButtonStyles(Control parent)
         {
-             foreach (Control control in parent.Controls)
+            // Iterate through all controls inside the specified parent
+            foreach (Control control in parent.Controls)
             {
                 if (control is Guna.UI2.WinForms.Guna2Button button)
                 {
-                     button.FillColor = Color.White;
-                    button.ForeColor = Color.Black;
-                    button.Checked = false;
+                    // Reset styles to default
+                    button.FillColor = Color.White; // Default color
+                    button.ForeColor = Color.Black; // Default text color
+                    button.Checked = false; // Uncheck the button
                 }
                 else if (control.HasChildren)
                 {
-                     ResetButtonStyles(control);
+                    // Recursively reset styles for child controls
+                    ResetButtonStyles(control);
                 }
             }
         }
 
- 
+
+
+
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             HomePanel childForm = new HomePanel();
