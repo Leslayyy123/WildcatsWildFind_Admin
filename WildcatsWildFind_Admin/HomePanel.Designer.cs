@@ -76,7 +76,7 @@
             label9 = new Label();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label13 = new Label();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            sidebarPanel = new Guna.UI2.WinForms.Guna2Panel();
             label10 = new Label();
             guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label17 = new Label();
@@ -380,7 +380,7 @@
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
             guna2ShadowPanel2.Controls.Add(label13);
-            guna2ShadowPanel2.Controls.Add(guna2Panel1);
+            guna2ShadowPanel2.Controls.Add(sidebarPanel);
             guna2ShadowPanel2.Controls.Add(label10);
             guna2ShadowPanel2.FillColor = Color.White;
             guna2ShadowPanel2.Location = new Point(833, 280);
@@ -404,14 +404,14 @@
             label13.TabIndex = 5;
             label13.Text = "All Time";
             // 
-            // guna2Panel1
+            // sidebarPanel
             // 
-            guna2Panel1.CustomizableEdges = customizableEdges11;
-            guna2Panel1.Location = new Point(3, 59);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel1.Size = new Size(265, 496);
-            guna2Panel1.TabIndex = 6;
+            sidebarPanel.CustomizableEdges = customizableEdges11;
+            sidebarPanel.Location = new Point(3, 59);
+            sidebarPanel.Name = "sidebarPanel";
+            sidebarPanel.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            sidebarPanel.Size = new Size(265, 496);
+            sidebarPanel.TabIndex = 6;
             // 
             // label10
             // 
@@ -682,7 +682,7 @@
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private Label label13;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel sidebarPanel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Label label15;
         private Label label14;
