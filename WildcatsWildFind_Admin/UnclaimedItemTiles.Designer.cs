@@ -29,54 +29,65 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UnclaimedItemTiles));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            pictureBox1 = new PictureBox();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            pbxItem = new PictureBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            label1 = new Label();
+            lblDate = new Label();
+            lblName = new Label();
             label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            lblCat = new Label();
+            ((System.ComponentModel.ISupportInitialize)pbxItem).BeginInit();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pbxItem
             // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-1, -1);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(336, 201);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pbxItem.BackgroundImage = (Image)resources.GetObject("pbxItem.BackgroundImage");
+            pbxItem.Image = (Image)resources.GetObject("pbxItem.Image");
+            pbxItem.Location = new Point(-1, -1);
+            pbxItem.Name = "pbxItem";
+            pbxItem.Size = new Size(336, 201);
+            pbxItem.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbxItem.TabIndex = 0;
+            pbxItem.TabStop = false;
             // 
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.Transparent;
-            guna2Panel1.Controls.Add(label4);
-            guna2Panel1.Controls.Add(label3);
+            guna2Panel1.Controls.Add(lblDate);
+            guna2Panel1.Controls.Add(lblName);
             guna2Panel1.Controls.Add(label2);
-            guna2Panel1.Controls.Add(label1);
-            guna2Panel1.CustomizableEdges = customizableEdges1;
+            guna2Panel1.Controls.Add(lblCat);
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.FillColor = Color.Maroon;
             guna2Panel1.Location = new Point(12, 125);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(323, 63);
             guna2Panel1.TabIndex = 1;
             // 
-            // label1
+            // lblDate
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(18, 17);
-            label1.Name = "label1";
-            label1.Size = new Size(104, 25);
-            label1.TabIndex = 2;
-            label1.Text = "Electronics";
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDate.ForeColor = SystemColors.ControlLightLight;
+            lblDate.Location = new Point(239, 36);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(74, 17);
+            lblDate.TabIndex = 5;
+            lblDate.Text = "12/12/2024";
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblName.ForeColor = SystemColors.ControlLightLight;
+            lblName.Location = new Point(145, 8);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(64, 23);
+            lblName.TabIndex = 4;
+            lblName.Text = "Iphone";
             // 
             // label2
             // 
@@ -89,27 +100,16 @@
             label2.TabIndex = 3;
             label2.Text = "Date Reported:";
             // 
-            // label3
+            // lblCat
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(145, 8);
-            label3.Name = "label3";
-            label3.Size = new Size(64, 23);
-            label3.TabIndex = 4;
-            label3.Text = "Iphone";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(239, 36);
-            label4.Name = "label4";
-            label4.Size = new Size(74, 17);
-            label4.TabIndex = 5;
-            label4.Text = "12/12/2024";
+            lblCat.AutoSize = true;
+            lblCat.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCat.ForeColor = SystemColors.ControlLightLight;
+            lblCat.Location = new Point(18, 17);
+            lblCat.Name = "lblCat";
+            lblCat.Size = new Size(104, 25);
+            lblCat.TabIndex = 2;
+            lblCat.Text = "Electronics";
             // 
             // UnclaimedItemTiles
             // 
@@ -117,11 +117,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(334, 200);
             Controls.Add(guna2Panel1);
-            Controls.Add(pictureBox1);
+            Controls.Add(pbxItem);
             FormBorderStyle = FormBorderStyle.None;
             Name = "UnclaimedItemTiles";
             Text = "UnclaimedItemTiles";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxItem).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ResumeLayout(false);
@@ -129,11 +129,11 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox pbxItem;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Label label1;
+        private Label lblCat;
         private Label label2;
-        private Label label4;
-        private Label label3;
+        private Label lblDate;
+        private Label lblName;
     }
 }
