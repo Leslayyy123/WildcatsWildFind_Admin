@@ -200,7 +200,7 @@
             tbxDate.BackColor = Color.Transparent;
             tbxDate.BorderThickness = 0;
             tbxDate.CustomizableEdges = customizableEdges7;
-            tbxDate.DefaultText = "Date";
+            tbxDate.DefaultText = "Date Found";
             tbxDate.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbxDate.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbxDate.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
