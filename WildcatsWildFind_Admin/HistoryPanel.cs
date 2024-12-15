@@ -102,16 +102,16 @@ namespace WildcatsWildFind_Admin
 
             Color statusColor = status switch
             {
-                "Claimed" or "C" => Color.Black,    
-                "Unclaimed" or "U" => Color.Maroon,   
-                "Pending" or "P" => Color.Gold,   
-                _ => Color.Gray, 
+                "Claimed" or "C" => Color.Black,
+                "Unclaimed" or "U" => Color.Maroon,
+                "Pending" or "P" => Color.Gold,
+                _ => Color.Gray,
             };
 
             var statusLabel = new Label
             {
                 Text = statusText,
-                ForeColor = statusColor,   
+                ForeColor = statusColor,
                 Font = new Font("Californian FB", 48, FontStyle.Bold),
                 Location = new Point(30, 12),
                 Size = new Size(87, 91)
@@ -280,8 +280,8 @@ namespace WildcatsWildFind_Admin
                 BorderStyle = BorderStyle.None,
                 SizeMode = PictureBoxSizeMode.StretchImage,
                 Dock = DockStyle.Right,
-                BorderRadius = 10, 
-                BackColor = Color.Transparent, 
+                BorderRadius = 10,
+                BackColor = Color.Transparent,
             };
 
             if (row["photo"] != DBNull.Value)
@@ -306,5 +306,189 @@ namespace WildcatsWildFind_Admin
 
         }
 
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                {
+                    openFileDialog.Filter = "Excel Files|*.xlsx;*.xls";
+                    openFileDialog.Title = "Select an Excel File";
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string excelPath = openFileDialog.FileName;
+
+                         
+                        string excelConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + excelPath + ";Extended Properties=\"Excel 12.0 Xml;HDR=YES;\"";
+                        using (OleDbConnection excelConnection = new OleDbConnection(excelConnectionString))
+                        {
+                            excelConnection.Open();
+                            DataTable excelData = new DataTable();
+                            string query = "SELECT * FROM [Sheet1$]"; 
+                            using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, excelConnection))
+                            {
+                                adapter.Fill(excelData);
+                            }
+
+                        
+                            using (OleDbConnection accessConnection = new OleDbConnection(connectionString))
+                            {
+                                accessConnection.Open();
+                                foreach (DataRow row in excelData.Rows)
+                                {
+                                    string insertQuery = "INSERT INTO ReportedItems (fullName, studentID, itemName, itemDescription, itemType, dateFound, locationFound, Status) " +
+                                        "VALUES (@fullName, @studentID, @itemName, @itemDescription, @itemType, @dateFound, @locationFound, @Status)";
+                                    using (OleDbCommand command = new OleDbCommand(insertQuery, accessConnection))
+                                    {
+                                        command.Parameters.AddWithValue("@fullName", row["fullName"]);
+                                        command.Parameters.AddWithValue("@studentID", row["studentID"]);
+                                        command.Parameters.AddWithValue("@itemName", row["itemName"]);
+                                        command.Parameters.AddWithValue("@itemDescription", row["itemDescription"]);
+                                        command.Parameters.AddWithValue("@itemType", row["itemType"]);
+                                        command.Parameters.AddWithValue("@dateFound", Convert.ToDateTime(row["dateFound"]));
+                                        command.Parameters.AddWithValue("@locationFound", row["locationFound"]);
+                                        command.Parameters.AddWithValue("@Status", row["Status"]);
+                                        command.ExecuteNonQuery();
+                                    }
+                                }
+                            }
+                        }
+                        MessageBox.Show("Data imported successfully!", "Import Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error importing data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                {
+                    saveFileDialog.Filter = "CSV Files|*.csv";
+                    saveFileDialog.Title = "Export Database as CSV";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string filePath = saveFileDialog.FileName;
+
+                        using (OleDbConnection conn = new OleDbConnection(connectionString))
+                        {
+                            conn.Open();
+                            string query = "SELECT * FROM ReportedItems";
+                            using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                            using (OleDbDataReader reader = cmd.ExecuteReader())
+                            using (StreamWriter writer = new StreamWriter(filePath))
+                            {
+                                
+                                string[] headers = Enumerable.Range(0, reader.FieldCount).Select(reader.GetName).ToArray();
+                                writer.WriteLine(string.Join(",", headers));
+
+                                
+                                while (reader.Read())
+                                {
+                                    string[] row = Enumerable.Range(0, reader.FieldCount)
+                                                             .Select(i => reader[i]?.ToString().Replace(",", " ")) 
+                                                             .ToArray();
+                                    writer.WriteLine(string.Join(",", row));
+                                }
+                            }
+                        }
+                        MessageBox.Show("Data exported successfully!", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error exporting data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = tbxSearch.Text.Trim();
+
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = $@"SELECT * FROM ReportedItems 
+                              WHERE Status LIKE '%{searchText}%' 
+                              OR fullName LIKE '%{searchText}%' 
+                              OR studentID LIKE '%{searchText}%'
+                              OR ID LIKE '%{searchText}%'
+                              OR itemName LIKE '%{searchText}%'
+                              OR itemDescription LIKE '%{searchText}%'
+                              OR itemType LIKE '%{searchText}%'
+                              OR locationFound LIKE '%{searchText}%'";
+
+                    OleDbCommand cmd = new OleDbCommand(query, conn);
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    splitsplit.Panel2.Controls.Clear(); 
+                    int yOffset = 10;
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        AddHistoryTile(row, yOffset);
+                        yOffset += 150;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error during search: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cmbxStatus_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedStatus = cmbxStatus.SelectedItem?.ToString() ?? "";
+
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = selectedStatus == "All" || string.IsNullOrWhiteSpace(selectedStatus)
+                                   ? "SELECT * FROM ReportedItems"
+                                   : "SELECT * FROM ReportedItems WHERE Status = @Status";
+
+                    OleDbCommand cmd = new OleDbCommand(query, conn);
+                    if (selectedStatus != "All" && !string.IsNullOrWhiteSpace(selectedStatus))
+                    {
+                        cmd.Parameters.AddWithValue("@Status", selectedStatus);
+                    }
+
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    splitsplit.Panel2.Controls.Clear(); 
+                    int yOffset = 10;
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        AddHistoryTile(row, yOffset);
+                        yOffset += 150;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error filtering by status: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void splitsplit_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

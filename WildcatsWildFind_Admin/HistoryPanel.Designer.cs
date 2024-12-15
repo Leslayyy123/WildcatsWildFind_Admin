@@ -45,7 +45,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            cmbx1 = new Controls.cmbx();
+            cmbxStatus = new Controls.cmbx();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             tbxStatus = new Guna.UI2.WinForms.Guna2TextBox();
             tbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,6 +54,8 @@
             btnImport = new Guna.UI2.WinForms.Guna2Button();
             btnExport = new Guna.UI2.WinForms.Guna2Button();
             splitsplit = new SplitContainer();
+            Import = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            Export = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitsplit).BeginInit();
@@ -96,23 +98,25 @@
             guna2TextBox1.TabIndex = 2;
             guna2TextBox1.TextAlign = HorizontalAlignment.Center;
             // 
-            // cmbx1
+            // cmbxStatus
             // 
-            cmbx1.BackColor = Color.FromArgb(241, 234, 234);
-            cmbx1.BorderColor = Color.MediumSeaGreen;
-            cmbx1.BorderSize = 0;
-            cmbx1.DropDownStyle = ComboBoxStyle.DropDown;
-            cmbx1.Font = new Font("Century Gothic", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            cmbx1.ForeColor = Color.DimGray;
-            cmbx1.IconColor = Color.Maroon;
-            cmbx1.ListBackColor = Color.FromArgb(230, 228, 245);
-            cmbx1.ListTextColor = Color.DimGray;
-            cmbx1.Location = new Point(819, 56);
-            cmbx1.MinimumSize = new Size(200, 30);
-            cmbx1.Name = "cmbx1";
-            cmbx1.Size = new Size(226, 35);
-            cmbx1.TabIndex = 4;
-            cmbx1.Texts = "Status";
+            cmbxStatus.BackColor = Color.FromArgb(241, 234, 234);
+            cmbxStatus.BorderColor = Color.MediumSeaGreen;
+            cmbxStatus.BorderSize = 0;
+            cmbxStatus.DropDownStyle = ComboBoxStyle.DropDown;
+            cmbxStatus.Font = new Font("Century Gothic", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            cmbxStatus.ForeColor = Color.DimGray;
+            cmbxStatus.IconColor = Color.Maroon;
+            cmbxStatus.Items.AddRange(new object[] { "Claimed", "Unclaimed", "Pending", "Archived" });
+            cmbxStatus.ListBackColor = Color.FromArgb(230, 228, 245);
+            cmbxStatus.ListTextColor = Color.DimGray;
+            cmbxStatus.Location = new Point(819, 56);
+            cmbxStatus.MinimumSize = new Size(200, 30);
+            cmbxStatus.Name = "cmbxStatus";
+            cmbxStatus.Size = new Size(226, 35);
+            cmbxStatus.TabIndex = 4;
+            cmbxStatus.Texts = "Status";
+            cmbxStatus.OnSelectedIndexChanged += cmbxStatus_OnSelectedIndexChanged;
             // 
             // guna2PictureBox2
             // 
@@ -189,6 +193,7 @@
             tbxSearch.Size = new Size(703, 61);
             tbxSearch.TabIndex = 1;
             tbxSearch.TextOffset = new Point(100, 0);
+            tbxSearch.TextChanged += tbxSearch_TextChanged;
             // 
             // guna2Panel2
             // 
@@ -243,6 +248,8 @@
             btnImport.ShadowDecoration.Shadow = new Padding(8);
             btnImport.Size = new Size(102, 47);
             btnImport.TabIndex = 0;
+            Import.SetToolTip(btnImport, "Import");
+            btnImport.Click += btnImport_Click;
             // 
             // btnExport
             // 
@@ -271,6 +278,8 @@
             btnExport.ShadowDecoration.Shadow = new Padding(8);
             btnExport.Size = new Size(90, 47);
             btnExport.TabIndex = 6;
+            Export.SetToolTip(btnExport, "Export");
+            btnExport.Click += btnExport_Click;
             // 
             // splitsplit
             // 
@@ -280,7 +289,7 @@
             // 
             // splitsplit.Panel1
             // 
-            splitsplit.Panel1.Controls.Add(cmbx1);
+            splitsplit.Panel1.Controls.Add(cmbxStatus);
             splitsplit.Panel1.Controls.Add(guna2Panel2);
             splitsplit.Panel1.Controls.Add(guna2PictureBox2);
             splitsplit.Panel1.Controls.Add(tbxStatus);
@@ -290,9 +299,23 @@
             // splitsplit.Panel2
             // 
             splitsplit.Panel2.AutoScroll = true;
+            splitsplit.Panel2.Paint += splitsplit_Panel2_Paint;
             splitsplit.Size = new Size(1096, 722);
             splitsplit.SplitterDistance = 141;
             splitsplit.TabIndex = 0;
+            // 
+            // Import
+            // 
+            Import.AllowLinksHandling = true;
+            Import.ForeColor = Color.Maroon;
+            Import.MaximumSize = new Size(0, 0);
+            // 
+            // Export
+            // 
+            Export.AllowLinksHandling = true;
+            Export.ForeColor = Color.Maroon;
+            Export.MaximumSize = new Size(0, 0);
+            Export.TitleForeColor = Color.Maroon;
             // 
             // HistoryPanel
             // 
@@ -321,12 +344,14 @@
         private Guna.UI2.WinForms.Guna2TextBox tbxStatus;
         private Guna.UI2.WinForms.Guna2TextBox tbxSearch;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Controls.cmbx cmbx1;
+        private Controls.cmbx cmbxStatus;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
         private Guna.UI2.WinForms.Guna2Button btnImport;
         private Guna.UI2.WinForms.Guna2Button btnExport;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private SplitContainer splitsplit;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip Import;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip Export;
     }
 }
