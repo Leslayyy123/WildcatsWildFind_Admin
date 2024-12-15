@@ -44,25 +44,21 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            HistoryContainer = new Guna.UI2.WinForms.Guna2Panel();
             cmbx1 = new Controls.cmbx();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             tbxStatus = new Guna.UI2.WinForms.Guna2TextBox();
             tbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            ItemContainer = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             btnImport = new Guna.UI2.WinForms.Guna2Button();
             btnExport = new Guna.UI2.WinForms.Guna2Button();
-            HistoryContainer.SuspendLayout();
+            splitsplit = new SplitContainer();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)splitsplit).BeginInit();
+            splitsplit.Panel1.SuspendLayout();
+            splitsplit.SuspendLayout();
             SuspendLayout();
             // 
             // guna2TextBox1
@@ -100,26 +96,6 @@
             guna2TextBox1.TabIndex = 2;
             guna2TextBox1.TextAlign = HorizontalAlignment.Center;
             // 
-            // HistoryContainer
-            // 
-            HistoryContainer.Controls.Add(cmbx1);
-            HistoryContainer.Controls.Add(guna2PictureBox2);
-            HistoryContainer.Controls.Add(tbxStatus);
-            HistoryContainer.Controls.Add(tbxSearch);
-            HistoryContainer.Controls.Add(ItemContainer);
-            HistoryContainer.Controls.Add(guna2Panel2);
-            HistoryContainer.Controls.Add(guna2PictureBox1);
-            HistoryContainer.Controls.Add(guna2Panel1);
-            HistoryContainer.CustomizableEdges = customizableEdges7;
-            HistoryContainer.Location = new Point(12, 134);
-            HistoryContainer.Name = "HistoryContainer";
-            HistoryContainer.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            HistoryContainer.ShadowDecoration.Depth = 18;
-            HistoryContainer.ShadowDecoration.Enabled = true;
-            HistoryContainer.ShadowDecoration.Shadow = new Padding(0, 0, 8, 8);
-            HistoryContainer.Size = new Size(1096, 721);
-            HistoryContainer.TabIndex = 3;
-            // 
             // cmbx1
             // 
             cmbx1.BackColor = Color.FromArgb(241, 234, 234);
@@ -131,7 +107,7 @@
             cmbx1.IconColor = Color.Maroon;
             cmbx1.ListBackColor = Color.FromArgb(230, 228, 245);
             cmbx1.ListTextColor = Color.DimGray;
-            cmbx1.Location = new Point(813, 48);
+            cmbx1.Location = new Point(819, 56);
             cmbx1.MinimumSize = new Size(200, 30);
             cmbx1.Name = "cmbx1";
             cmbx1.Size = new Size(226, 35);
@@ -146,7 +122,7 @@
             guna2PictureBox2.CustomizableEdges = customizableEdges3;
             guna2PictureBox2.FillColor = Color.Transparent;
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(80, 51);
+            guna2PictureBox2.Location = new Point(86, 59);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2PictureBox2.Size = new Size(35, 35);
@@ -167,7 +143,7 @@
             tbxStatus.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbxStatus.Font = new Font("Segoe UI", 9F);
             tbxStatus.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxStatus.Location = new Point(795, 36);
+            tbxStatus.Location = new Point(801, 44);
             tbxStatus.Margin = new Padding(3, 4, 3, 4);
             tbxStatus.Name = "tbxStatus";
             tbxStatus.PasswordChar = '\0';
@@ -197,7 +173,7 @@
             tbxSearch.Font = new Font("Century Gothic", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
             tbxSearch.ForeColor = Color.DimGray;
             tbxSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbxSearch.Location = new Point(49, 36);
+            tbxSearch.Location = new Point(55, 44);
             tbxSearch.Margin = new Padding(4, 5, 4, 5);
             tbxSearch.Name = "tbxSearch";
             tbxSearch.PasswordChar = '\0';
@@ -213,25 +189,14 @@
             tbxSearch.Size = new Size(703, 61);
             tbxSearch.TabIndex = 1;
             tbxSearch.TextOffset = new Point(100, 0);
-            tbxSearch.TextChanged += tbxSearch_TextChanged;
-            // 
-            // ItemContainer
-            // 
-            ItemContainer.CustomizableEdges = customizableEdges9;
-            ItemContainer.Dock = DockStyle.Top;
-            ItemContainer.Location = new Point(0, 127);
-            ItemContainer.Name = "ItemContainer";
-            ItemContainer.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            ItemContainer.Size = new Size(1096, 647);
-            ItemContainer.TabIndex = 6;
             // 
             // guna2Panel2
             // 
-            guna2Panel2.CustomizableEdges = customizableEdges11;
+            guna2Panel2.CustomizableEdges = customizableEdges9;
             guna2Panel2.FillColor = Color.DarkGray;
-            guna2Panel2.Location = new Point(137, 48);
+            guna2Panel2.Location = new Point(142, 56);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Panel2.Size = new Size(1, 43);
             guna2Panel2.TabIndex = 5;
             // 
@@ -239,36 +204,25 @@
             // 
             guna2PictureBox1.BackColor = Color.FromArgb(241, 234, 234);
             guna2PictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            guna2PictureBox1.CustomizableEdges = customizableEdges13;
+            guna2PictureBox1.CustomizableEdges = customizableEdges11;
             guna2PictureBox1.FillColor = Color.Transparent;
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(80, 51);
+            guna2PictureBox1.Location = new Point(86, 59);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2PictureBox1.Size = new Size(35, 35);
             guna2PictureBox1.TabIndex = 3;
             guna2PictureBox1.TabStop = false;
-            // 
-            // guna2Panel1
-            // 
-            guna2Panel1.BackColor = Color.Transparent;
-            guna2Panel1.CustomizableEdges = customizableEdges15;
-            guna2Panel1.Dock = DockStyle.Top;
-            guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel1.Size = new Size(1096, 127);
-            guna2Panel1.TabIndex = 12;
             // 
             // btnImport
             // 
             btnImport.BackColor = Color.Transparent;
             btnImport.BackgroundImageLayout = ImageLayout.Zoom;
             btnImport.BorderRadius = 30;
-            customizableEdges17.BottomLeft = false;
-            customizableEdges17.BottomRight = false;
-            customizableEdges17.TopRight = false;
-            btnImport.CustomizableEdges = customizableEdges17;
+            customizableEdges13.BottomLeft = false;
+            customizableEdges13.BottomRight = false;
+            customizableEdges13.TopRight = false;
+            btnImport.CustomizableEdges = customizableEdges13;
             btnImport.DisabledState.BorderColor = Color.DarkGray;
             btnImport.DisabledState.CustomBorderColor = Color.DarkGray;
             btnImport.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -283,22 +237,21 @@
             btnImport.Name = "btnImport";
             btnImport.ShadowDecoration.BorderRadius = 30;
             btnImport.ShadowDecoration.Color = Color.DimGray;
-            btnImport.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnImport.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnImport.ShadowDecoration.Depth = 15;
             btnImport.ShadowDecoration.Enabled = true;
             btnImport.ShadowDecoration.Shadow = new Padding(8);
             btnImport.Size = new Size(102, 47);
             btnImport.TabIndex = 0;
-            btnImport.Click += guna2Button1_Click;
             // 
             // btnExport
             // 
             btnExport.BackColor = Color.Transparent;
             btnExport.BorderRadius = 30;
-            customizableEdges19.BottomLeft = false;
-            customizableEdges19.TopLeft = false;
-            customizableEdges19.TopRight = false;
-            btnExport.CustomizableEdges = customizableEdges19;
+            customizableEdges15.BottomLeft = false;
+            customizableEdges15.TopLeft = false;
+            customizableEdges15.TopRight = false;
+            btnExport.CustomizableEdges = customizableEdges15;
             btnExport.DisabledState.BorderColor = Color.DarkGray;
             btnExport.DisabledState.CustomBorderColor = Color.DarkGray;
             btnExport.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -312,12 +265,34 @@
             btnExport.Name = "btnExport";
             btnExport.ShadowDecoration.BorderRadius = 30;
             btnExport.ShadowDecoration.Color = Color.DimGray;
-            btnExport.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnExport.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnExport.ShadowDecoration.Depth = 15;
             btnExport.ShadowDecoration.Enabled = true;
             btnExport.ShadowDecoration.Shadow = new Padding(8);
             btnExport.Size = new Size(90, 47);
             btnExport.TabIndex = 6;
+            // 
+            // splitsplit
+            // 
+            splitsplit.Location = new Point(12, 133);
+            splitsplit.Name = "splitsplit";
+            splitsplit.Orientation = Orientation.Horizontal;
+            // 
+            // splitsplit.Panel1
+            // 
+            splitsplit.Panel1.Controls.Add(cmbx1);
+            splitsplit.Panel1.Controls.Add(guna2Panel2);
+            splitsplit.Panel1.Controls.Add(guna2PictureBox2);
+            splitsplit.Panel1.Controls.Add(tbxStatus);
+            splitsplit.Panel1.Controls.Add(tbxSearch);
+            splitsplit.Panel1.Controls.Add(guna2PictureBox1);
+            // 
+            // splitsplit.Panel2
+            // 
+            splitsplit.Panel2.AutoScroll = true;
+            splitsplit.Size = new Size(1096, 722);
+            splitsplit.SplitterDistance = 141;
+            splitsplit.TabIndex = 0;
             // 
             // HistoryPanel
             // 
@@ -327,31 +302,31 @@
             ClientSize = new Size(1134, 920);
             Controls.Add(btnExport);
             Controls.Add(btnImport);
-            Controls.Add(HistoryContainer);
             Controls.Add(guna2TextBox1);
+            Controls.Add(splitsplit);
             FormBorderStyle = FormBorderStyle.None;
             Name = "HistoryPanel";
             Text = "HistoryPanel";
-            HistoryContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            splitsplit.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitsplit).EndInit();
+            splitsplit.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Panel HistoryContainer;
         private Guna.UI2.WinForms.Guna2TextBox tbxStatus;
         private Guna.UI2.WinForms.Guna2TextBox tbxSearch;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Controls.cmbx cmbx1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Panel ItemContainer;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
         private Guna.UI2.WinForms.Guna2Button btnImport;
         private Guna.UI2.WinForms.Guna2Button btnExport;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private SplitContainer splitsplit;
     }
 }

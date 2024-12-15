@@ -70,6 +70,7 @@ namespace WildcatsWildFind_Admin
                 lblCategory.ForeColor = Color.Black;
                 lblCategory.Location = new Point(27, yOffset);
                 lblCategory.AutoSize = true;
+
                 Guna2ProgressBar gunaProgressBar = new Guna2ProgressBar();
                 gunaProgressBar.Location = new Point(27, yOffset + 20);
                 gunaProgressBar.Size = new Size(219, 20);
