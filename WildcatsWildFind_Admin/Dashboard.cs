@@ -12,6 +12,7 @@ namespace WildcatsWildFind_Admin
 {
     public partial class Dashboard : Form
     {
+        bool sidebarExpand;
         public Dashboard()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace WildcatsWildFind_Admin
 
         private void HighlightButton(Guna.UI2.WinForms.Guna2Button clickedButton)
         {
-            ResetButtonStyles(PanelMenu);
+            ResetButtonStyles(panelMenu);
             clickedButton.FillColor = Color.Maroon;
             clickedButton.ForeColor = Color.White;
             clickedButton.Checked = true;
@@ -70,7 +71,7 @@ namespace WildcatsWildFind_Admin
         {
             HomePanel childForm = new HomePanel();
             LoadChildForm(childForm);
-            HighlightButton((Guna.UI2.WinForms.Guna2Button)sender); 
+            HighlightButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void btnReport_Click(object sender, EventArgs e)
@@ -126,6 +127,33 @@ namespace WildcatsWildFind_Admin
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                panelMenu.Width -= 50;
+                if (panelMenu.Width == panelMenu.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sidebarTimer.Stop();
+                }
+            }
+            else
+            {
+                panelMenu.Width += 50;
+                if (panelMenu.Width == panelMenu.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
         }
     }
 }
