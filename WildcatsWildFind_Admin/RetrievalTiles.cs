@@ -21,5 +21,10 @@ namespace WildcatsWildFind_Admin
         {
 
         }
+
+        private void lblDesc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

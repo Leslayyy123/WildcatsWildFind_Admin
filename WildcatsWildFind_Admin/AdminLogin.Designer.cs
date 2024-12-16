@@ -98,6 +98,7 @@
             lblForgotPass.Size = new Size(146, 27);
             lblForgotPass.TabIndex = 4;
             lblForgotPass.Text = "Forgot Password?";
+            lblForgotPass.Click += lblForgotPass_Click;
             // 
             // txtboxUsername
             // 
