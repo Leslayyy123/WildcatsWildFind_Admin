@@ -202,6 +202,7 @@
             btnAccept.Size = new Size(114, 41);
             btnAccept.TabIndex = 12;
             btnAccept.Text = "Accept";
+            btnAccept.Click += btnAccept_Click;
             // 
             // btnDeny
             // 

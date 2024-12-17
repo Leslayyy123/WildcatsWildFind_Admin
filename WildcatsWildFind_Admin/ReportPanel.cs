@@ -174,7 +174,7 @@ namespace WildcatsWildFind_Admin
                tbxLoc.Text == "Location" || string.IsNullOrWhiteSpace(tbxLoc.Text) ||
                tbxDate.Text == "Date" || string.IsNullOrWhiteSpace(tbxDate.Text) ||
                tbxItemName.Text == "Item Name" || string.IsNullOrWhiteSpace(tbxItemName.Text) ||
-               tbxItemDesc.Text == "Item Description" || string.IsNullOrWhiteSpace(tbxItemDesc.Text) || 
+               tbxItemDesc.Text == "Item Description" || string.IsNullOrWhiteSpace(tbxItemDesc.Text) ||
                pbxItem.Image == null)
             {
                 MessageBox.Show("Please fill in all the required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -297,6 +297,18 @@ namespace WildcatsWildFind_Admin
         }
 
         private void btnPhoto_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pbxItem.Image = Image.FromFile(openFileDialog.FileName);
+                }
+            }
+        }
+
+        private void guna2TileButton2_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
