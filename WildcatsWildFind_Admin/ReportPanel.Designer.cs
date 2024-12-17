@@ -44,12 +44,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportPanel));
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             tbxID = new Guna.UI2.WinForms.Guna2TextBox();
@@ -67,9 +69,10 @@
             tbxItemName = new Guna.UI2.WinForms.Guna2TextBox();
             pbxItem = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2TileButton2 = new Guna.UI2.WinForms.Guna2TileButton();
+            cmbxCat = new Controls.cmbx();
             btnPhoto = new Guna.UI2.WinForms.Guna2Button();
             btnRep = new Guna.UI2.WinForms.Guna2Button();
-            cmbxCat = new Controls.cmbx();
             ((System.ComponentModel.ISupportInitialize)pbxItem).BeginInit();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
@@ -340,6 +343,7 @@
             // 
             guna2Panel1.BackColor = Color.Transparent;
             guna2Panel1.BorderRadius = 20;
+            guna2Panel1.Controls.Add(guna2TileButton2);
             guna2Panel1.Controls.Add(cmbxCat);
             guna2Panel1.Controls.Add(btnPhoto);
             guna2Panel1.Controls.Add(btnRep);
@@ -357,62 +361,34 @@
             guna2Panel1.Controls.Add(panel2);
             guna2Panel1.Controls.Add(panel1);
             guna2Panel1.Controls.Add(panel7);
-            guna2Panel1.CustomizableEdges = customizableEdges21;
+            guna2Panel1.CustomizableEdges = customizableEdges23;
             guna2Panel1.FillColor = Color.Maroon;
             guna2Panel1.Location = new Point(18, 113);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.BorderRadius = 20;
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges24;
             guna2Panel1.ShadowDecoration.Enabled = true;
             guna2Panel1.ShadowDecoration.Shadow = new Padding(2, 2, 8, 8);
             guna2Panel1.Size = new Size(1119, 696);
             guna2Panel1.TabIndex = 26;
             // 
-            // btnPhoto
+            // guna2TileButton2
             // 
-            btnPhoto.BackColor = Color.Transparent;
-            btnPhoto.BorderRadius = 36;
-            btnPhoto.CustomizableEdges = customizableEdges17;
-            btnPhoto.DisabledState.BorderColor = Color.DarkGray;
-            btnPhoto.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPhoto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPhoto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPhoto.FillColor = Color.White;
-            btnPhoto.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPhoto.ForeColor = Color.Maroon;
-            btnPhoto.Location = new Point(480, 559);
-            btnPhoto.Name = "btnPhoto";
-            btnPhoto.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btnPhoto.Size = new Size(75, 108);
-            btnPhoto.TabIndex = 27;
-            btnPhoto.Text = "+";
-            btnPhoto.TextOffset = new Point(5, -25);
-            btnPhoto.Click += btnPhoto_Click;
-            // 
-            // btnRep
-            // 
-            btnRep.Animated = true;
-            btnRep.BorderColor = Color.Gainsboro;
-            btnRep.BorderRadius = 21;
-            btnRep.BorderThickness = 1;
-            btnRep.CustomizableEdges = customizableEdges19;
-            btnRep.DisabledState.BorderColor = Color.DarkGray;
-            btnRep.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnRep.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnRep.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnRep.FillColor = Color.Maroon;
-            btnRep.Font = new Font("Segoe UI Variable Display Semib", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRep.ForeColor = Color.White;
-            btnRep.Location = new Point(102, 582);
-            btnRep.Name = "btnRep";
-            btnRep.PressedColor = Color.IndianRed;
-            btnRep.ShadowDecoration.BorderRadius = 10;
-            btnRep.ShadowDecoration.Color = Color.White;
-            btnRep.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btnRep.Size = new Size(264, 48);
-            btnRep.TabIndex = 9;
-            btnRep.Text = "Report";
-            btnRep.Click += btnRep_Click;
+            guna2TileButton2.CustomizableEdges = customizableEdges17;
+            guna2TileButton2.DisabledState.BorderColor = Color.DarkGray;
+            guna2TileButton2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2TileButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2TileButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2TileButton2.FillColor = Color.Brown;
+            guna2TileButton2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2TileButton2.ForeColor = Color.White;
+            guna2TileButton2.Location = new Point(496, 625);
+            guna2TileButton2.Name = "guna2TileButton2";
+            guna2TileButton2.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2TileButton2.Size = new Size(123, 46);
+            guna2TileButton2.TabIndex = 30;
+            guna2TileButton2.Text = "Place Holder";
+            guna2TileButton2.Click += guna2TileButton2_Click;
             // 
             // cmbxCat
             // 
@@ -434,6 +410,52 @@
             cmbxCat.Size = new Size(403, 38);
             cmbxCat.TabIndex = 28;
             cmbxCat.Texts = "Item Category";
+            // 
+            // btnPhoto
+            // 
+            btnPhoto.BackColor = Color.Transparent;
+            btnPhoto.BorderRadius = 36;
+            btnPhoto.CustomizableEdges = customizableEdges19;
+            btnPhoto.DisabledState.BorderColor = Color.DarkGray;
+            btnPhoto.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPhoto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPhoto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPhoto.FillColor = Color.White;
+            btnPhoto.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPhoto.ForeColor = Color.Maroon;
+            btnPhoto.Location = new Point(520, 526);
+            btnPhoto.Name = "btnPhoto";
+            btnPhoto.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnPhoto.Size = new Size(73, 93);
+            btnPhoto.TabIndex = 27;
+            btnPhoto.Text = "+";
+            btnPhoto.TextOffset = new Point(5, -25);
+            btnPhoto.Click += btnPhoto_Click;
+            // 
+            // btnRep
+            // 
+            btnRep.Animated = true;
+            btnRep.BorderColor = Color.Gainsboro;
+            btnRep.BorderRadius = 21;
+            btnRep.BorderThickness = 1;
+            btnRep.CustomizableEdges = customizableEdges21;
+            btnRep.DisabledState.BorderColor = Color.DarkGray;
+            btnRep.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnRep.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnRep.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnRep.FillColor = Color.Maroon;
+            btnRep.Font = new Font("Segoe UI Variable Display Semib", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRep.ForeColor = Color.White;
+            btnRep.Location = new Point(102, 582);
+            btnRep.Name = "btnRep";
+            btnRep.PressedColor = Color.IndianRed;
+            btnRep.ShadowDecoration.BorderRadius = 10;
+            btnRep.ShadowDecoration.Color = Color.White;
+            btnRep.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnRep.Size = new Size(264, 48);
+            btnRep.TabIndex = 9;
+            btnRep.Text = "Report";
+            btnRep.Click += btnRep_Click;
             // 
             // ReportPanel
             // 
@@ -471,5 +493,6 @@
         private Guna.UI2.WinForms.Guna2Button btnRep;
         private Guna.UI2.WinForms.Guna2Button btnPhoto;
         private Controls.cmbx cmbxCat;
+        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton2;
     }
 }
