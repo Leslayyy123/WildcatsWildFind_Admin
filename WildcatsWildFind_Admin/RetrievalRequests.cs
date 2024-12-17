@@ -24,44 +24,53 @@ namespace WildcatsWildFind_Admin
                 {
                     connection.Open();
 
-                    // Query to get the count of items in the RequestRetrieval table
-                    string query = "SELECT COUNT(*) FROM RequestRetrieval";
+                    // Query to fetch the actual data (replace column names as needed)
+                    string query = "SELECT itemName, studentName, dateLost, email, itemDescription FROM RequestRetrieval";
 
                     using (var command = new OleDbCommand(query, connection))
                     {
-                        int itemCount = Convert.ToInt32(command.ExecuteScalar()); // ExecuteScalar returns the first column of the first row
-
-                        int formX = 40; // Initial X position for the form
-                        int formY = 10; // Initial Y position for the form
-
-                        // Create the specified number of tiles based on itemCount
-                        for (int i = 0; i < itemCount; i++)
+                        using (var reader = command.ExecuteReader())
                         {
-                            // Create an instance of the RetrievalTile form
-                            RetrievalControl retrievalTile = new RetrievalControl();
+                            int formX = 20; // X position for the tile
+                            int formY = 10; // Y position for the tile
 
-                            // Set the tile location relative to the panel (use coordinates inside the container)
-                            retrievalTile.Location = new Point(formX, formY);
+                            while (reader.Read()) // Loop through the rows in the database
+                            {
+                                // Create an instance of RetrievalControl
+                                RetrievalControl retrievalTile = new RetrievalControl();
 
-                            // Add the tile to the panel (retrievalContainer is the name of the Panel control)
-                            retrievalContainer.Controls.Add(retrievalTile);
+                                // Assign database values to the labels in RetrievalControl
+                                retrievalTile.lblItem.Text = reader["itemName"].ToString();
+                                retrievalTile.lblName.Text = reader["studentName"].ToString();
+                                retrievalTile.lblDateLost.Text =
+                                    Convert.ToDateTime(reader["dateLost"]).ToString("MM/dd/yyyy");
+                                retrievalTile.lblEmail.Text = reader["email"].ToString();
+                                retrievalTile.lblDesc.Text = reader["itemDescription"].ToString();
 
-                            // Adjust the Y position for the next tile
-                            formX += retrievalTile.Width + 30; // Move Y position for the next form
+                                // Position the tile inside the container
+                                retrievalTile.Location = new Point(formX, formY);
+
+                                // Add the tile to the container (Panel control)
+                                retrievalContainer.Controls.Add(retrievalTile);
+
+                                // Adjust Y position for the next tile (stacking vertically)
+                                formX += retrievalTile.Width + 20;
+
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while fetching items: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Example event handler where you call DisplayRetrievalTiles when needed (e.g., form load or button click)
+
         private void RetrievalRequests_Load(object sender, EventArgs e)
         {
-            DisplayRetrievalTiles(); // Call the method to display the tiles in the panel
+            DisplayRetrievalTiles(); 
         }
     }
 }

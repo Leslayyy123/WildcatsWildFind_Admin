@@ -34,10 +34,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             label2 = new Label();
             lblName = new Label();
@@ -50,12 +50,12 @@
             btnDeny = new Guna.UI2.WinForms.Guna2Button();
             btnAccept = new Guna.UI2.WinForms.Guna2Button();
             containerPanel = new Guna.UI2.WinForms.Guna2Panel();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             lblItem = new Label();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             containerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -208,6 +208,7 @@
             btnAccept.Size = new Size(114, 51);
             btnAccept.TabIndex = 12;
             btnAccept.Text = "Accept";
+            btnAccept.Click += btnAccept_Click;
             // 
             // containerPanel
             // 
@@ -229,25 +230,6 @@
             containerPanel.ShadowDecoration.Shadow = new Padding(0, 0, 10, 10);
             containerPanel.Size = new Size(289, 569);
             containerPanel.TabIndex = 13;
-            // 
-            // guna2PictureBox1
-            // 
-            guna2PictureBox1.BackColor = Color.Transparent;
-            guna2PictureBox1.BorderRadius = 20;
-            customizableEdges7.BottomLeft = false;
-            customizableEdges7.BottomRight = false;
-            guna2PictureBox1.CustomizableEdges = customizableEdges7;
-            guna2PictureBox1.Dock = DockStyle.Top;
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(0, 0);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2PictureBox1.ShadowDecoration.Depth = 20;
-            guna2PictureBox1.ShadowDecoration.Enabled = true;
-            guna2PictureBox1.ShadowDecoration.Shadow = new Padding(0, 0, 0, 10);
-            guna2PictureBox1.Size = new Size(289, 202);
-            guna2PictureBox1.TabIndex = 13;
-            guna2PictureBox1.TabStop = false;
             // 
             // guna2Panel1
             // 
@@ -280,6 +262,25 @@
             lblItem.TabIndex = 12;
             lblItem.Text = "Laptop";
             // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.BackColor = Color.Transparent;
+            guna2PictureBox1.BorderRadius = 20;
+            customizableEdges7.BottomLeft = false;
+            customizableEdges7.BottomRight = false;
+            guna2PictureBox1.CustomizableEdges = customizableEdges7;
+            guna2PictureBox1.Dock = DockStyle.Top;
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(0, 0);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2PictureBox1.ShadowDecoration.Depth = 20;
+            guna2PictureBox1.ShadowDecoration.Enabled = true;
+            guna2PictureBox1.ShadowDecoration.Shadow = new Padding(0, 0, 0, 10);
+            guna2PictureBox1.Size = new Size(289, 202);
+            guna2PictureBox1.TabIndex = 13;
+            guna2PictureBox1.TabStop = false;
+            // 
             // RetrievalControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -299,31 +300,31 @@
             Size = new Size(303, 581);
             containerPanel.ResumeLayout(false);
             containerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
-        private Label label1;
-        private Label label2;
-        private Label lblName;
-        private Label label4;
-        private Label lblEmail;
-        private Label label6;
-        private Label lblDateLost;
-        private Label label8;
-        private Label lblDesc;
-        private Guna.UI2.WinForms.Guna2Button btnDeny;
+        public Label label1;
+        public Label label2;
+        public Label lblName;
+        public Label label4;
+        public Label lblEmail;
+        public Label label6;
+        public Label lblDateLost;
+        public Label label8;
+        public Label lblDesc;
+        public Guna.UI2.WinForms.Guna2Button btnDeny;
         public Guna.UI2.WinForms.Guna2Button btnAccept;
 
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel containerPanel;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Label lblItem;
+        public Guna.UI2.WinForms.Guna2Panel containerPanel;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        public Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        public Label lblItem;
     }
 }

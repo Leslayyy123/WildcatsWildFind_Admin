@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pbxItem = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -44,10 +44,10 @@
             lblDateLost = new Label();
             label8 = new Label();
             lblDesc = new Label();
-            btnDeny = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             lblItem = new Label();
             btnAccept = new Guna.UI2.WinForms.Guna2Button();
+            btnDeny = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pbxItem).BeginInit();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
@@ -154,42 +154,18 @@
             lblDesc.TabIndex = 9;
             lblDesc.Text = "and completing requests efficiently, ensuring \r\ntimely communication andupdates. With cus\r\ntomizable featuresand robust suppor\r\n";
             // 
-            // btnDeny
-            // 
-            btnDeny.BackColor = Color.Transparent;
-            btnDeny.BorderRadius = 15;
-            btnDeny.CustomizableEdges = customizableEdges7;
-            btnDeny.DisabledState.BorderColor = Color.DarkGray;
-            btnDeny.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDeny.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDeny.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDeny.FillColor = Color.Maroon;
-            btnDeny.Font = new Font("Segoe UI", 9F);
-            btnDeny.ForeColor = Color.White;
-            btnDeny.Location = new Point(147, 398);
-            btnDeny.Margin = new Padding(3, 4, 3, 4);
-            btnDeny.Name = "btnDeny";
-            btnDeny.ShadowDecoration.BorderRadius = 15;
-            btnDeny.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnDeny.ShadowDecoration.Depth = 20;
-            btnDeny.ShadowDecoration.Enabled = true;
-            btnDeny.ShadowDecoration.Shadow = new Padding(0, 0, 8, 8);
-            btnDeny.Size = new Size(114, 41);
-            btnDeny.TabIndex = 10;
-            btnDeny.Text = "Deny";
-            // 
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.Transparent;
             guna2Panel1.BorderRadius = 10;
             guna2Panel1.Controls.Add(lblItem);
-            customizableEdges9.BottomRight = false;
-            customizableEdges9.TopLeft = false;
-            guna2Panel1.CustomizableEdges = customizableEdges9;
+            customizableEdges1.BottomRight = false;
+            customizableEdges1.TopLeft = false;
+            guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.FillColor = Color.FromArgb(240, 181, 4);
             guna2Panel1.Location = new Point(12, 12);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(129, 33);
             guna2Panel1.TabIndex = 11;
             // 
@@ -207,7 +183,7 @@
             // 
             btnAccept.BackColor = Color.Transparent;
             btnAccept.BorderRadius = 15;
-            btnAccept.CustomizableEdges = customizableEdges11;
+            btnAccept.CustomizableEdges = customizableEdges3;
             btnAccept.DisabledState.BorderColor = Color.DarkGray;
             btnAccept.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAccept.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -219,13 +195,37 @@
             btnAccept.Margin = new Padding(3, 4, 3, 4);
             btnAccept.Name = "btnAccept";
             btnAccept.ShadowDecoration.BorderRadius = 15;
-            btnAccept.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnAccept.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnAccept.ShadowDecoration.Depth = 20;
             btnAccept.ShadowDecoration.Enabled = true;
             btnAccept.ShadowDecoration.Shadow = new Padding(0, 0, 8, 8);
             btnAccept.Size = new Size(114, 41);
             btnAccept.TabIndex = 12;
             btnAccept.Text = "Accept";
+            // 
+            // btnDeny
+            // 
+            btnDeny.BackColor = Color.Transparent;
+            btnDeny.BorderRadius = 15;
+            btnDeny.CustomizableEdges = customizableEdges5;
+            btnDeny.DisabledState.BorderColor = Color.DarkGray;
+            btnDeny.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDeny.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDeny.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDeny.FillColor = Color.Maroon;
+            btnDeny.Font = new Font("Segoe UI", 9F);
+            btnDeny.ForeColor = Color.White;
+            btnDeny.Location = new Point(147, 398);
+            btnDeny.Margin = new Padding(3, 4, 3, 4);
+            btnDeny.Name = "btnDeny";
+            btnDeny.ShadowDecoration.BorderRadius = 15;
+            btnDeny.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnDeny.ShadowDecoration.Depth = 20;
+            btnDeny.ShadowDecoration.Enabled = true;
+            btnDeny.ShadowDecoration.Shadow = new Padding(0, 0, 8, 8);
+            btnDeny.Size = new Size(114, 41);
+            btnDeny.TabIndex = 10;
+            btnDeny.Text = "Deny";
             // 
             // RetrievalTiles
             // 
@@ -267,9 +267,9 @@
         private Label lblDateLost;
         private Label label8;
         private Label lblDesc;
-        private Guna.UI2.WinForms.Guna2Button btnDeny;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Label lblItem;
         private Guna.UI2.WinForms.Guna2Button btnAccept;
+        private Guna.UI2.WinForms.Guna2Button btnDeny;
     }
 }
