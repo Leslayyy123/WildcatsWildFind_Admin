@@ -32,7 +32,7 @@ namespace WildcatsWildFind_Admin
 
                     using (var command = new OleDbCommand(query, connection))
                     {
-                      
+
                         using (var reader = command.ExecuteReader())
                         {
                             bool isMatchFound = false;
@@ -67,6 +67,9 @@ namespace WildcatsWildFind_Admin
             }
         }
 
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

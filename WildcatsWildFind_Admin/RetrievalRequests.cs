@@ -8,8 +8,8 @@ namespace WildcatsWildFind_Admin
 {
     public partial class RetrievalRequests : Form
     {
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\WildcatsWildFind_Admin\WildcatsWildFind_Admin\Database\WildFind.mdb;Persist Security Info=False;";
-
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\jaspher siloy\source\repos\WildcatsWildFind_Admin\WildcatsWildFind_Admin\Database\WildFind.mdb;Persist Security Info=False;";
+        
         public RetrievalRequests()
         {
             InitializeComponent();
@@ -20,6 +20,7 @@ namespace WildcatsWildFind_Admin
         {
             try
             {
+                retrievalContainer.Controls.Clear(); // Clear existing tiles
                 using (var connection = new OleDbConnection(connectionString))
                 {
                     connection.Open();
