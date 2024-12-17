@@ -300,8 +300,8 @@
             // 
             splitsplit.Panel2.AutoScroll = true;
             splitsplit.Panel2.Paint += splitsplit_Panel2_Paint;
-            splitsplit.Size = new Size(1096, 722);
-            splitsplit.SplitterDistance = 141;
+            splitsplit.Size = new Size(1116, 775);
+            splitsplit.SplitterDistance = 151;
             splitsplit.TabIndex = 0;
             // 
             // Import
@@ -322,7 +322,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Admin___Report_Found_Item__Tarunga_lang_huhu_;
-            ClientSize = new Size(1134, 920);
+            ClientSize = new Size(1155, 920);
             Controls.Add(btnExport);
             Controls.Add(btnImport);
             Controls.Add(guna2TextBox1);
