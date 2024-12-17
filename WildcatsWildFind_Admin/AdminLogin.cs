@@ -4,7 +4,7 @@ namespace WildcatsWildFind_Admin
 {
     public partial class AdminLogin : Form
     {
-        OleDbConnection myConn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\WildcatsWildFind_Admin\WildcatsWildFind_Admin\Database\WildFind.mdb;Persist Security Info=False;");
+        OleDbConnection myConn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Leslie\OneDrive - Cebu Institute of Technology University\Desktop\WildFind.mdb;Persist Security Info=False;");
         public AdminLogin()
         {
             InitializeComponent();
@@ -100,8 +100,9 @@ namespace WildcatsWildFind_Admin
 
                     if (result > 0)
                     {
+                        string username = txtboxUsername.Text;
                         MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Dashboard dashboard = new Dashboard();
+                        Dashboard dashboard = new Dashboard(username);
                         dashboard.Show();
                         this.Hide();
                     }

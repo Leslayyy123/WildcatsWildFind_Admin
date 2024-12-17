@@ -184,6 +184,7 @@
             btnDeny.Size = new Size(114, 51);
             btnDeny.TabIndex = 10;
             btnDeny.Text = "Deny";
+            btnDeny.Click += btnDeny_Click;
             // 
             // btnAccept
             // 

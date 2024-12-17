@@ -7,7 +7,7 @@ namespace WildcatsWildFind_Admin
     public partial class UnclaimedItems : Form
     {
         private const int MaxItemsPerPage = 4; // Maximum items per page per category
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\WildcatsWildFind_Admin\WildcatsWildFind_Admin\Database\WildFind.mdb;Persist Security Info=False;";
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Leslie\OneDrive - Cebu Institute of Technology University\Desktop\WildFind.mdb;Persist Security Info=False;";
         private Dictionary<string, List<(string itemName, int itemID, Image image)>> categorizedItems;        // Stores items grouped by category
         private Dictionary<string, int> currentPagePerCategory; // Tracks current page for each category
 

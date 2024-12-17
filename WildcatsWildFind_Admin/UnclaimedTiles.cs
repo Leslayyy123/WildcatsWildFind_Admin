@@ -9,7 +9,7 @@ namespace WildcatsWildFind_Admin
     {
         private string _itemName;
         private byte[] _itemPhoto;
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\WildcatsWildFind_Admin\WildcatsWildFind_Admin\Database\WildFind.mdb;Persist Security Info=False;";
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Leslie\OneDrive - Cebu Institute of Technology University\Desktop\WildFind.mdb;Persist Security Info=False;";
 
         // Variables for dragging the form
         private bool isMouseDown = false;

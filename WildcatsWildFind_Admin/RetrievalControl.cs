@@ -15,13 +15,15 @@ namespace WildcatsWildFind_Admin
 {
     public partial class RetrievalControl : UserControl
     {
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\WildcatsWildFind_Admin\WildcatsWildFind_Admin\Database\WildFind.mdb;Persist Security Info=False;";
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Leslie\OneDrive - Cebu Institute of Technology University\Desktop\WildFind.mdb;Persist Security Info=False;";
 
         public event EventHandler AcceptButtonClicked;
+        private string adminUser;
 
-        public RetrievalControl()
+        public RetrievalControl(string username)
         {
             InitializeComponent();
+            adminUser = username;
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -41,9 +43,9 @@ namespace WildcatsWildFind_Admin
 
                     string deleteQuery = @"
                 DELETE FROM RequestRetrieval 
-                WHERE StudentName = @studentName 
-                  AND ItemName = @itemName 
-                  AND DateFound = @dateFound";
+                WHERE studentName = @studentName 
+                  AND itemName = @itemName 
+                  AND dateLost = @dateFound";
 
                     using (OleDbCommand cmd = new OleDbCommand(deleteQuery, connection))
                     {
@@ -58,37 +60,23 @@ namespace WildcatsWildFind_Admin
                         {
                             MessageBox.Show("Record deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Step 2: Update the status to "Pending" in ReportedItems table
-                            string updateQuery = @"
-                        UPDATE ReportedItems 
-                        SET Status = 'Pending' 
-                        WHERE ItemName = @itemName";
+                            // Step 3: Send the email notification
+                            SendEmailNotification(studentName, itemName, dateFound, to);
 
-                            using (OleDbCommand updateCmd = new OleDbCommand(updateQuery, connection))
-                            {
-                                updateCmd.Parameters.AddWithValue("@itemName", itemName);
-
-                                int updateRows = updateCmd.ExecuteNonQuery();
-
-                                if (updateRows > 0)
-                                {
-                                    MessageBox.Show("Item status updated to 'Pending'.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                    // Step 3: Send the email notification
-                                    SendEmailNotification(studentName, itemName, dateFound, to);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("No matching item found to update the status.", "Update Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                }
-                            }
+                            // Log the action as 'Approved'
+                            LogAction(adminUser, itemName, "Approved");
+                               
                         }
                         else
                         {
                             MessageBox.Show("No matching record found to delete.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            // Log the action as 'Denied'
+                            LogAction(adminUser, itemName, "Denied");
                         }
                     }
                 }
+
                 AcceptButtonClicked?.Invoke(this, EventArgs.Empty);
             }
             catch (Exception ex)
@@ -169,6 +157,85 @@ namespace WildcatsWildFind_Admin
             catch (Exception ex)
             {
                 MessageBox.Show($"Email Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LogAction(string adminUsername, string itemName, string action)
+        {
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string insertQuery = @"
+                INSERT INTO AdminLog (adminName, adminAction, adminItem, adminDate)
+                VALUES (@adminName, @adminAction, @adminItem, @adminDate)";
+
+                    using (OleDbCommand cmd = new OleDbCommand(insertQuery, connection))
+                    {
+                        // Add parameters
+                        cmd.Parameters.AddWithValue("@adminName", adminUsername);
+                        cmd.Parameters.AddWithValue("@adminAction", action);
+                        cmd.Parameters.AddWithValue("@adminItem", itemName);
+                        cmd.Parameters.AddWithValue("@adminDate", DateTime.Now);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error logging action: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDeny_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Get the item details from the form
+                string studentName = lblName.Text.Trim();  // Student Name
+                string itemName = lblItem.Text.Trim();     // Item Name
+                string dateFound = lblDateLost.Text.Trim(); // Date Found
+
+                // Step 1: Delete the item from the RequestRetrieval table
+                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Delete the retrieval request based on the student, item, and date found
+                    string deleteQuery = @"
+                DELETE FROM RequestRetrieval
+                WHERE StudentName = @studentName
+                  AND ItemName = @itemName
+                  AND DateFound = @dateFound";
+
+                    using (OleDbCommand deleteCmd = new OleDbCommand(deleteQuery, connection))
+                    {
+                        // Add parameters to avoid SQL injection
+                        deleteCmd.Parameters.AddWithValue("@studentName", studentName);
+                        deleteCmd.Parameters.AddWithValue("@itemName", itemName);
+                        deleteCmd.Parameters.AddWithValue("@dateFound", dateFound);
+
+                        int rowsAffected = deleteCmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Item successfully deleted from the retrieval requests.", "Action Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Optionally, log the action into AdminLog (if needed)
+                            LogAction(adminUser, itemName, "Denied");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No matching request found to delete.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

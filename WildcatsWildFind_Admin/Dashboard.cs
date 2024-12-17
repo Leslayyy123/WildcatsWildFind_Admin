@@ -13,7 +13,8 @@ namespace WildcatsWildFind_Admin
     public partial class Dashboard : Form
     {
         bool sidebarExpand;
-        public Dashboard()
+        private string adminUser;
+        public Dashboard(string username)
         {
             InitializeComponent();
             btnHome.Checked = true;
@@ -23,6 +24,7 @@ namespace WildcatsWildFind_Admin
                 HomePanel childForm = new HomePanel();
                 LoadChildForm(childForm);
                 HighlightButton(btnHome);
+                adminUser = username;
             }
         }
 
@@ -76,7 +78,7 @@ namespace WildcatsWildFind_Admin
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            ReportPanel childForm = new ReportPanel();
+            ReportPanel childForm = new ReportPanel(adminUser);
             LoadChildForm(childForm);
             HighlightButton((Guna.UI2.WinForms.Guna2Button)sender);
         }
@@ -90,7 +92,7 @@ namespace WildcatsWildFind_Admin
 
         private void btnRequest_Click(object sender, EventArgs e)
         {
-            RetrievalRequests childForm = new RetrievalRequests();
+            RetrievalRequests childForm = new RetrievalRequests(adminUser);
             LoadChildForm(childForm);
             HighlightButton((Guna.UI2.WinForms.Guna2Button)sender);
         }

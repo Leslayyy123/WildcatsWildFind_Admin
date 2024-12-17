@@ -326,6 +326,7 @@
             // 
             // pbxItem
             // 
+            pbxItem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pbxItem.BackColor = Color.Transparent;
             pbxItem.BorderRadius = 350;
             customizableEdges15.BottomRight = false;
@@ -341,6 +342,7 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2Panel1.BackColor = Color.Transparent;
             guna2Panel1.BorderRadius = 20;
             guna2Panel1.Controls.Add(guna2TileButton2);

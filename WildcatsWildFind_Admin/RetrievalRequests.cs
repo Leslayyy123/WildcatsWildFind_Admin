@@ -8,12 +8,13 @@ namespace WildcatsWildFind_Admin
 {
     public partial class RetrievalRequests : Form
     {
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\WildcatsWildFind_Admin\WildcatsWildFind_Admin\Database\WildFind.mdb;Persist Security Info=False;";
-        
-        public RetrievalRequests()
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Leslie\OneDrive - Cebu Institute of Technology University\Desktop\WildFind.mdb;Persist Security Info=False;";
+        private string adminUser;
+        public RetrievalRequests(string username)
         {
             InitializeComponent();
             DisplayRetrievalTiles();
+            adminUser = username;
         }
 
         private void DisplayRetrievalTiles()
@@ -38,7 +39,7 @@ namespace WildcatsWildFind_Admin
                             while (reader.Read()) // Loop through the rows in the database
                             {
                                 // Create an instance of RetrievalControl
-                                RetrievalControl retrievalTile = new RetrievalControl();
+                                RetrievalControl retrievalTile = new RetrievalControl(adminUser);
 
                                 // Assign database values to the labels in RetrievalControl
                                 retrievalTile.lblItem.Text = reader["itemName"].ToString();
