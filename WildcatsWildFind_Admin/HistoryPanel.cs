@@ -319,19 +319,19 @@ namespace WildcatsWildFind_Admin
                     {
                         string excelPath = openFileDialog.FileName;
 
-                         
+
                         string excelConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + excelPath + ";Extended Properties=\"Excel 12.0 Xml;HDR=YES;\"";
                         using (OleDbConnection excelConnection = new OleDbConnection(excelConnectionString))
                         {
                             excelConnection.Open();
                             DataTable excelData = new DataTable();
-                            string query = "SELECT * FROM [Sheet1$]"; 
+                            string query = "SELECT * FROM [Sheet1$]";
                             using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, excelConnection))
                             {
                                 adapter.Fill(excelData);
                             }
 
-                        
+
                             using (OleDbConnection accessConnection = new OleDbConnection(connectionString))
                             {
                                 accessConnection.Open();
@@ -385,15 +385,15 @@ namespace WildcatsWildFind_Admin
                             using (OleDbDataReader reader = cmd.ExecuteReader())
                             using (StreamWriter writer = new StreamWriter(filePath))
                             {
-                                
+
                                 string[] headers = Enumerable.Range(0, reader.FieldCount).Select(reader.GetName).ToArray();
                                 writer.WriteLine(string.Join(",", headers));
 
-                                
+
                                 while (reader.Read())
                                 {
                                     string[] row = Enumerable.Range(0, reader.FieldCount)
-                                                             .Select(i => reader[i]?.ToString().Replace(",", " ")) 
+                                                             .Select(i => reader[i]?.ToString().Replace(",", " "))
                                                              .ToArray();
                                     writer.WriteLine(string.Join(",", row));
                                 }
@@ -433,7 +433,7 @@ namespace WildcatsWildFind_Admin
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    splitsplit.Panel2.Controls.Clear(); 
+                    splitsplit.Panel2.Controls.Clear();
                     int yOffset = 10;
                     foreach (DataRow row in dataTable.Rows)
                     {
@@ -471,7 +471,7 @@ namespace WildcatsWildFind_Admin
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
 
-                    splitsplit.Panel2.Controls.Clear(); 
+                    splitsplit.Panel2.Controls.Clear();
                     int yOffset = 10;
                     foreach (DataRow row in dataTable.Rows)
                     {
@@ -487,6 +487,11 @@ namespace WildcatsWildFind_Admin
         }
 
         private void splitsplit_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void splitsplit_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -16,5 +16,15 @@ namespace WildcatsWildFind_Admin
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDesc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
