@@ -13,15 +13,16 @@ namespace WildcatsWildFind_Admin
 {
     public partial class ReportPanel : Form
     {
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\WildcatsWildFind_Admin\WildcatsWildFind_Admin\Database\WildFind.mdb;Persist Security Info=False;";
-        public ReportPanel()
+        private string adminUser;
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Leslie\OneDrive - Cebu Institute of Technology University\Desktop\WildFind.mdb;Persist Security Info=False;";
+        public ReportPanel(string username)
         {
             InitializeComponent();
 
             tbxID.Text = "ID";
             tbxID.ForeColor = Color.White;
 
-
+            adminUser = username;
             tbxID.Enter += TbxID_Enter;
             tbxID.Leave += TbxID_Leave;
 
@@ -174,7 +175,7 @@ namespace WildcatsWildFind_Admin
                tbxLoc.Text == "Location" || string.IsNullOrWhiteSpace(tbxLoc.Text) ||
                tbxDate.Text == "Date" || string.IsNullOrWhiteSpace(tbxDate.Text) ||
                tbxItemName.Text == "Item Name" || string.IsNullOrWhiteSpace(tbxItemName.Text) ||
-               tbxItemDesc.Text == "Item Description" || string.IsNullOrWhiteSpace(tbxItemDesc.Text) || 
+               tbxItemDesc.Text == "Item Description" || string.IsNullOrWhiteSpace(tbxItemDesc.Text) ||
                pbxItem.Image == null)
             {
                 MessageBox.Show("Please fill in all the required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -197,8 +198,13 @@ namespace WildcatsWildFind_Admin
                 }
             }
 
-            string query = @"INSERT INTO ReportedItems (studentID, fullName, itemName, dateFound, itemDescription, itemType, locationFound, status, photo) 
-                     VALUES (@studentID, @fullName, @itemName, @dateFound, @itemDescription, @itemType, @locationFound, @status, @photo)";
+            // Query for the ReportedItems table
+            string queryReportedItems = @"INSERT INTO ReportedItems (studentID, fullName, itemName, dateFound, itemDescription, itemType, locationFound, status, photo) 
+                                  VALUES (@studentID, @fullName, @itemName, @dateFound, @itemDescription, @itemType, @locationFound, @status, @photo)";
+
+            // Query for the AdminLog table
+            string queryAdminLog = @"INSERT INTO AdminLog (adminName, adminAction, adminDate, itemName) 
+                             VALUES (@adminName, @adminAction, @adminDate, @itemName)";
 
             try
             {
@@ -206,21 +212,34 @@ namespace WildcatsWildFind_Admin
                 {
                     connection.Open();
 
-                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    // Insert into ReportedItems
+                    using (OleDbCommand commandReportedItems = new OleDbCommand(queryReportedItems, connection))
                     {
-                        command.Parameters.AddWithValue("@studentID", tbxID.Text);
-                        command.Parameters.AddWithValue("@fullName", tbxName.Text);
-                        command.Parameters.AddWithValue("@locationFound", tbxLoc.Text);
-                        command.Parameters.AddWithValue("@dateFound", tbxDate.Text);
-                        command.Parameters.AddWithValue("@itemName", tbxItemName.Text);
-                        command.Parameters.AddWithValue("@itemType", cmbxCat.SelectedItem.ToString());
-                        command.Parameters.AddWithValue("@itemDescription", tbxItemDesc.Text);
-                        command.Parameters.AddWithValue("@status", "Unclaimed");
-                        command.Parameters.AddWithValue("@photo", photoBytes);
-                        int rowsAffected = command.ExecuteNonQuery();
+                        commandReportedItems.Parameters.AddWithValue("@studentID", tbxID.Text);
+                        commandReportedItems.Parameters.AddWithValue("@fullName", tbxName.Text);
+                        commandReportedItems.Parameters.AddWithValue("@itemName", tbxItemName.Text);
+                        commandReportedItems.Parameters.AddWithValue("@dateFound", tbxDate.Text);
+                        commandReportedItems.Parameters.AddWithValue("@itemDescription", tbxItemDesc.Text);
+                        commandReportedItems.Parameters.AddWithValue("@itemType", cmbxCat.SelectedItem.ToString());
+                        commandReportedItems.Parameters.AddWithValue("@locationFound", tbxLoc.Text);
+                        commandReportedItems.Parameters.AddWithValue("@status", "Unclaimed");
+                        commandReportedItems.Parameters.AddWithValue("@photo", photoBytes);
+
+                        int rowsAffected = commandReportedItems.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
+                            // Insert into AdminLog
+                            using (OleDbCommand commandAdminLog = new OleDbCommand(queryAdminLog, connection))
+                            {
+                                commandAdminLog.Parameters.AddWithValue("@adminName", adminUser); 
+                                commandAdminLog.Parameters.AddWithValue("@adminAction", "Reported");
+                                commandAdminLog.Parameters.AddWithValue("@adminDate", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                commandAdminLog.Parameters.AddWithValue("@itemName", tbxItemName.Text);
+
+                                commandAdminLog.ExecuteNonQuery();
+                            }
+
                             MessageBox.Show("Report submitted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ClearForm();
                         }
@@ -236,6 +255,7 @@ namespace WildcatsWildFind_Admin
                 MessageBox.Show($"An error occurred: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void ClearForm()
         {
@@ -297,6 +317,18 @@ namespace WildcatsWildFind_Admin
         }
 
         private void btnPhoto_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pbxItem.Image = Image.FromFile(openFileDialog.FileName);
+                }
+            }
+        }
+
+        private void guna2TileButton2_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {

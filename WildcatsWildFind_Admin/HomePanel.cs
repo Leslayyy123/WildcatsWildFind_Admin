@@ -14,13 +14,14 @@ namespace WildcatsWildFind_Admin
 {
     public partial class HomePanel : Form
     {
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\source\repos\WildcatsWildFind_Admin\WildcatsWildFind_Admin\Database\WildFind.mdb;Persist Security Info=False;";
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Leslie\OneDrive - Cebu Institute of Technology University\Desktop\WildFind.mdb;Persist Security Info=False;";
 
         public HomePanel()
         {
             InitializeComponent();
             UpdateCounts();
             AddProgressBarToSidebar();
+            DisplayAdminLog();
         }
 
         private void UpdateCounts()
@@ -213,6 +214,55 @@ namespace WildcatsWildFind_Admin
             return total;
         }
 
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisplayAdminLog()
+        {
+            try
+            {
+                using (var connection = new OleDbConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Query to fetch the actual data
+                    string query = "SELECT adminName, adminAction, adminDate, adminItem FROM AdminLog";
+
+                    using (var command = new OleDbCommand(query, connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            int yPos = 0; // Y position for stacking controls vertically
+
+                            while (reader.Read()) // Loop through the rows in the database
+                            {
+                                // Create an instance of AdminLogControl
+                                AdminLogControl LogPanel = new AdminLogControl();
+
+                                // Assign database values to the labels in AdminLogControl
+                                LogPanel.lblName.Text = reader["adminName"].ToString();
+                                LogPanel.lblTime.Text = Convert.ToDateTime(reader["adminDate"]).ToString("MM/dd/yyyy hh:mm tt");
+                                LogPanel.btnAction.Text = reader["adminAction"].ToString();
+                                LogPanel.lblItem.Text = reader["adminItem"].ToString();
+
+                                // Set the position of the LogPanel control
+                                LogPanel.Location = new Point(0, yPos); // X=0, Y=yPos
+                                yPos += LogPanel.Height + 10; // Increment Y position for the next control (spacing = 10px)
+
+                                // Add the control to the container (Panel control)
+                                adminPanel.Controls.Add(LogPanel);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
     }
 }
