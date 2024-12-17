@@ -86,7 +86,7 @@ namespace WildcatsWildFind_Admin
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string query = "SELECT COUNT(*) FROM AdminInfo WHERE adminUser = @adminUser AND password = @password";
+            string query = "SELECT COUNT(*) FROM AdminInfo WHERE Username = @adminUser AND Password = @password";
 
             try
             {
